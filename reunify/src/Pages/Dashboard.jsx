@@ -21,24 +21,36 @@ function Dashboard() {
       </div>
       <div className='space-y-[-90px]'>
         <div className='flex justify-center'>
-          <div className='flex text-[200px] font-familjen text-  [#FFF8E8] font-bold antialiased leading-[304px]'>
+          <div className='flex text-6xl md:text-[200px] font-familjen text-[#FFF8E8] font-bold antialiased leading-[304px]'>
              <h1>RE</h1>
-             <img className='mb-[80px] space-x-1' src={img1} alt="" />
+              <div className='mt-24'>
+                <img className='space-x-1 w-20 h-20 md:w-60 md:h-60' src={img1} alt="" />
+              </div>
              <h1 className='ml-2'>NIFY</h1>
           </div>
         </div>
-        <div className='flex justify-center text-center text-white leading-[24px] text-[20px] py-10'>
+        <div className='flex justify-center text-center text-white leading-[24px] text-sm md:text-[20px] py-2 md:py-10'>
             <h1>crossover of generations - get mentorship, expand network <br/> and build your career</h1>
         </div>
       </div>
-      <div className='flex justify-center space-x-16 text-white'>
-        <div className='flex space-x-12 border-dashed border-2 border-[#fff8e8] rounded-full w-64'>
-           <img className='bg-[#f67e7d] rounded-full py-4' src={img2} alt="" />
-           <p>join us <br/> <span className='text-2xl'>ALUMNI</span> </p>
+      <div className='grid md:flex justify-center md:space-x-16 text-white space-y-6 mt-20 md:mt-4'>
+        <div className='flex space-x-12 border-dashed border-2 border-[#d3cdc0] rounded-full w-64 p-1'>
+           <div className='ml-[-8px] mt-[-8px] absolute'>
+              <img className='bg-[#f67e7d] rounded-full py-5 px-2' src={img2} alt="" />
+           </div>
+           <div className='px-10'>
+              <p className='text-[#d3cdc0]'>Join us</p>
+              <p className='text-2xl'>ALUMNI</p>
+           </div>
         </div>
-        <div className='flex space-x-12 border-dashed border-2 border-[#fff8e8] rounded-full w-64'>
-           <img className='bg-[#f67e7d] rounded-full py-4 px-5' src={img3} alt="" />
-           <p>join us <br/> <span className='text-2xl'>STUDENT</span> </p>
+        <div className='flex space-x-12 border-dashed border-2 border-[#d3cdc0] rounded-full w-64'>
+           <div className='ml-[-4px] mt-[-3px] absolute'>
+              <img className='bg-[#f67e7d] rounded-full py-4 px-5' src={img3} alt="" />
+           </div>
+           <div className='px-10'>
+              <p className='text-[#d3cdc0]'>Join us</p>
+              <p className='text-2xl'>STUDENT</p>
+           </div>
         </div>
       </div>
     </div>
