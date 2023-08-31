@@ -23,7 +23,7 @@ function Dashboard() {
         <div className='flex justify-center'>
           <div className='flex text-6xl md:text-[200px] font-familjen text-[#FFF8E8] font-bold antialiased leading-[304px]'>
              <h1>RE</h1>
-              <div className='mt-24'>
+              <div className='mt-24 md:mt-1'>
                 <img className='space-x-1 w-20 h-20 md:w-60 md:h-60' src={img1} alt="" />
               </div>
              <h1 className='ml-2'>NIFY</h1>
