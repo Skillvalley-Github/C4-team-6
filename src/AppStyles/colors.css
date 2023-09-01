@@ -1,0 +1,62 @@
+@import url('./global.css');
+
+/* ------------------------------ */
+/* COLOR-1 */
+/* ------------------------------ */
+.f-color-1{
+    color: var(--color-1);
+}
+
+.bg-color-1{
+    background-color: var(--color-1);
+}
+/* ------------------------------ */
+/* COLOR-2 */
+/* ------------------------------ */
+.f-color-2{
+    color: var(--color-2);
+}
+
+.bg-color-2{
+    background-color: var(--color-2);
+}
+/* ------------------------------ */
+/* COLOR-3 */
+/* ------------------------------ */
+.f-color-3{
+    color: var(--color-3);
+}
+
+.bg-color-3{
+    background-color: var(--color-3);
+}
+/* ------------------------------ */
+/* COLOR-4 */
+/* ------------------------------ */
+.f-color-4{
+    color: var(--color-4);
+}
+
+.bg-color-4{
+    background-color: var(--color-4);
+}
+/* ------------------------------ */
+/* COLOR-5 */
+/* ------------------------------ */
+.f-color-5{
+    color: var(--color-5);
+}
+
+.bg-color-5{
+    background-color: var(--color-5);
+}
+/* ------------------------------ */
+/* COLOR-6 */
+/* ------------------------------ */
+.f-color-6{
+    color: var(--color-6);
+}
+
+.bg-color-6{
+    background-color: var(--color-6);
+}

@@ -1,0 +1,61 @@
+@import url("./fonts.css");
+
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Webkit-based browsers */
+}
+
+:root{
+    /* ------------------------------ */
+    /* COLORS */
+    /* ------------------------------ */
+    --color-1: #FFFFFF;
+    --color-2: #FFF8E8;
+    --color-3: #F67E7D;
+    --color-4: #191516;
+    --color-5: rgba(255, 248, 232, 0.47);
+    --color-6: #787878;
+    /* ------------------------------ */
+    /* FONTS */
+    /* ------------------------------ */
+    --font-1: 'Trap-Light';
+    --font-2: 'Trap-Regular';
+    --font-3: 'Trap-Medium';
+    --font-4: 'Trap-Semibold';
+    --font-5: 'Trap-Bold';
+    --font-6: 'Trap-ExtraBold';
+    --font-7: 'Trap-Black';
+    --font-8: 'DTGetaiGroteskDisplay-Black';
+}
+
+/* ------------------------------ */
+/* TYPOGRAPHY */
+/* ------------------------------ */
+.font-1{
+    font-family: var(--font-1);
+}
+.font-2{
+    font-family: var(--font-2);
+}
+.font-3{
+    font-family: var(--font-3);
+}
+.font-4{
+    font-family: var(--font-4);
+}
+.font-5{
+    font-family: var(--font-5);
+}
+.font-6{
+    font-family: var(--font-6);
+}
+.font-7{
+    font-family: var(--font-7);
+}
+.font-8{
+    font-family: var(--font-8);
+}
