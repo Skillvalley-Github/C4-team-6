@@ -1,6 +1,6 @@
 import {useState } from 'react'
-import logo1 from '../image/Vector (4).png'
-import logo2 from '../image/Rectangle 19.png'
+import logo1 from '../image/Vector (1).svg'
+import logo2 from '../image/Rectangle 19.svg'
 import { NavLink } from 'react-router-dom'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {MdOutlineClose} from 'react-icons/md'
