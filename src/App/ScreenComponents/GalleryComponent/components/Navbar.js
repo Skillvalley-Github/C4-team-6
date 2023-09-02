@@ -32,7 +32,7 @@ const Navbar = () => {
         {display==='hidden'?   <GiHamburgerMenu className='text-3xl f-color-3 md:hidden block' onClick={clickHandle}/> : <MdOutlineClose      className='text-3xl md:hidden block f-color-3' onClick={clickHandle}/>}
     
         {/* mobile view */}
-        <div className={`md:hidden ${display} flex-col items-center z-10  py-20 gap-y-4 bg-black f-color-1 absolute w-[360px] h-[60vh] mt-[550px] md:mt-[500px]`}>
+        <div className={`md:hidden ${display} flex-col items-center z-10  py-20 gap-y-4 bg-black f-color-1 absolute w-full h-[60vh] mt-[550px] md:mt-[500px]`}>
           <NavLink to="/alumnus">Alumnus</NavLink>
           <NavLink to="/webinars">Webinars</NavLink>
           <NavLink to="/careers" className='f-color-1'>Careers</NavLink>
