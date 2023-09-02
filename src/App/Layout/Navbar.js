@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='flex justify-between py-4 mx-6 items-center '>
+      <div className='flex justify-between py-4 items-center mx-6 mr-6'>
         <div>
           <img src={logo1} alt="" />
         </div>
@@ -30,9 +30,9 @@ const Navbar = () => {
           <img src={logo2} alt="" />
         </div>
         {display==='hidden'?   <GiHamburgerMenu className='text-3xl f-color-3 md:hidden block' onClick={clickHandle}/> : <MdOutlineClose      className='text-3xl md:hidden block f-color-3' onClick={clickHandle}/>}
-    
-        {/* mobile view */}
-        <div className={`md:hidden ${display} flex-col items-center z-10  py-20 gap-y-4 bg-black f-color-1 absolute w-full h-[60vh] mt-[550px] md:mt-[500px]`}>
+      </div>
+      {/* mobile view */}
+      <div className={`md:hidden ${display} flex-col items-center z-10  py-20 gap-y-4 bg-black f-color-1 absolute w-full h-[60vh] md:mt-[500px]`}>
           <NavLink to="/alumnus">Alumnus</NavLink>
           <NavLink to="/all-webiner">Webinars</NavLink>
           <NavLink to="/careers" className='f-color-1'>Careers</NavLink>
@@ -40,7 +40,6 @@ const Navbar = () => {
           <NavLink to="/discussion" className='f-color-1'>Discussion</NavLink>
           <img src={logo2} alt="" />
         </div>
-      </div>
     </>
   );
 };
