@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import { BsPlus } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import Card from "./components/Card";
@@ -7,10 +6,9 @@ import Card from "./components/Card";
 const Gallery = () => {
   return (
     <>
-      <Navbar />
       <div>
         <div className="px-10 py-10 space-y-2">
-          <h1 className="text-4xl md:text-5xl font-6 f-color-1">
+          <h1 className="text-4xl md:text-6xl font-6 f-color-1">
             Reunion <span className="f-color-3">Gallery</span>
           </h1>
           <p className="text-md md:text-xl font-1 f-color-1">
