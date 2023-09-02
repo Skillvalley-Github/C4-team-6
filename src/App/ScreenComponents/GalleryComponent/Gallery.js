@@ -40,9 +40,9 @@ const Gallery = () => {
               <CiSearch className=" text-4xl " />
             </div>
             <input
-              className="px-16 mt-2 md:mt-0 border-dashed border-2 rounded-full bg-color-4"
+              className="px-20 w-[400px] mt-2 md:mt-0 border-dashed border-2 rounded-full bg-color-4"
               type="text"
-              placeholder="Search images by name"
+              placeholder="Search images by Name"
             />
           </div>
         </div>
