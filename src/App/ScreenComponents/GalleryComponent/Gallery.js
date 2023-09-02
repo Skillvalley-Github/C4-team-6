@@ -18,18 +18,18 @@ const Gallery = () => {
         </div>
 
         <div className="md:flex justify-between px-10 space-y-8 md:space-y-0">
-          <div className="flex space-x-5 items-center" onClick={()=>window.my_modal_3.showModal()}>
+          <div className="flex items-center" onClick={()=>window.my_modal_3.showModal()}>
             <div className="p-3 bg-color-3 rounded-full">
               <BsPlus className="text-4xl" />
             </div>
-            <button className="font-1  f-color-1">Upload image</button>
-            <dialog id="my_modal_3" className="modal bg-color-5">
+            <button className="font-1 f-color-1 px-4">Upload image</button>
+            <dialog id="my_modal_3" className="modal backdrop-blur-sm">
               <form method="dialog" className="modal-box bg-color-2">
-                <button className="btn btn-sm btn-circle btn-ghost    absolute right-2 top-2">✕</button>
+                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 <h3 className="font-bold text-lg font-8">Upload your memory</h3>
                 <div className="mt-6 bg-color-7 rounded-3xl">
-                  <div className="w-[400px] h-[360px]">
-                    <div className="absolute mt-[150px] ml-[200px] f-color-3">
+                  <div className=" md:w-[400px] h-[360px]">
+                    <div className="absolute mt-[150px]  f-color-3 ml-[100px] md:ml-[200px]">
                       <SlCloudUpload className="text-[80px]"/>
                     </div>
                   </div>
