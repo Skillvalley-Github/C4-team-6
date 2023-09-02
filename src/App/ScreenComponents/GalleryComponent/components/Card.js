@@ -12,6 +12,7 @@ const Card = () => {
           <GalleryCard
           key={data.key}
           title={data.title}
+          image={data.image}
           />
         )
       })

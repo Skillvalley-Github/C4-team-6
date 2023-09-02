@@ -1,0 +1,33 @@
+input#file {
+  display: inline-block;
+  width: 100%;
+  padding: 200px 0 0 0;
+  height: 120px;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: var(--color-7);
+  border-radius: 10px;
+}
+input#titleoffile {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: var(--color-7);
+  border-radius: 10px;
+  background-size: 60px 60px;
+}
+::-webkit-file-upload-button {
+  display: none;
+}
+
+input::-webkit-input-placeholder {
+  color: var(--color-3);
+  font-size: 20px;
+  font-family: var(--font-2);
+}
