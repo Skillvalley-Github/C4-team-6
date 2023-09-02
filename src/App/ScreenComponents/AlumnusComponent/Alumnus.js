@@ -1,6 +1,7 @@
 import React from "react";
 import CarouselCard from "./components/CarouselCard";
 import { CiSearch } from "react-icons/ci";
+import AllSeniors from "./components/AllSeniors";
 
 const Alumnus = () => {
   return (
@@ -29,8 +30,8 @@ const Alumnus = () => {
             />
           </div>
         </div>
-        <div className="col-span-1">
-          
+        <div className="container md:col-span-1">
+          <AllSeniors />
         </div>
       </div>
     </>

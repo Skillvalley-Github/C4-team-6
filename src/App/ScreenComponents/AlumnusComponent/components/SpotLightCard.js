@@ -5,13 +5,18 @@ import "../../../../AppStyles/alumnus.css";
 import alumni from "../../../Constants/alumni.png";
 import { CiShare1 } from "react-icons/ci";
 import { MdWorkspacesFilled } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const SpotLightCard = (props) => {
+  const navigate = useNavigate();
+    function redirect() {
+        navigate('/view-alumni-individual')
+    }
   return (
     <div className="carousel-item w-full md:w-1/2">
       <div className="bg-color-2 w-[100%] md:w-[100%] h-[100%] p-3 rounded-lg grid grid-cols-3 ">
         <figure className="col-span-3 md:col-span-1 alumni">
-          <img src={props.image} className="rounded-lg w-full" alt="alumni" />
+          <img src={props.image} className="rounded-lg w-full h-full" alt="alumni" />
         </figure>
         <div className="col-span-3 md:col-span-2">
           <div className="flex flex-col w-full h-full px-2 pt-3 md:pt-0">
@@ -20,7 +25,7 @@ const SpotLightCard = (props) => {
                 Pass out @{props.passoutYear}
               </p>
             </div>
-            <div className="intro h-[60%]">
+            <div className="intro h-[50%]">
               <div className="py-2 md:py-4 lg:py-5">
                 <p className="font-2 f-color-4 text-[0.6rem] md:text-xs">
                   meet our prestigious alumni
@@ -30,15 +35,15 @@ const SpotLightCard = (props) => {
                 </span>
               </div>
             </div>
-            <div className="more h-[20%] flex justify-between align-middle">
+            <div className="more h-[30%] flex justify-between align-middle">
               <div className="">
                 <p className="font-2 f-color-4 text-[0.6rem] md:text-xs flex gap-2">
                   <MdWorkspacesFilled />{props.designation}
                 </p>
               </div>
-              <div className="">
-                <CiShare1 />
-              </div>
+              <button className="btn btn-sm sm:btn-sm md:btn-sm lg:btn-md btn-hover" onClick={redirect}>
+                <CiShare1 className='' />
+              </button>
             </div>
           </div>
         </div>

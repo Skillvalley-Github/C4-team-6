@@ -11,6 +11,7 @@ import HeroPage from "./App/ScreenComponents/HeroPage";
 import Login from "./App/ScreenComponents/UserEntryComponents/Login";
 import Signup from "./App/ScreenComponents/UserEntryComponents/Signup";
 import Alumnus from "./App/ScreenComponents/AlumnusComponent/Alumnus";
+import ViewProfile from "./App/ScreenComponents/AlumnusComponent/ViewProfile";
 import Gallery from "./App/ScreenComponents/GalleryComponent/Gallery";
 import AllWebiner from "./App/ScreenComponents/WebinerComponent/AllWebiner";
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/alumnus",
         element: <Alumnus />
+      },
+      {
+        path: "/view-alumni-individual",
+        element: <ViewProfile />
       },
       {
         path: "/gallery",
