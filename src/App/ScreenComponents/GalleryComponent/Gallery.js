@@ -9,7 +9,7 @@ const Gallery = () => {
   return (
     <>
       <div>
-        <div className="px-10 py-10 space-y-2">
+        <div className="px-6 pb-8 pt-24 space-y-2">
           <h1 className="text-4xl md:text-6xl font-6 f-color-1">
             Reunion <span className="f-color-3">Gallery</span>
           </h1>
@@ -36,13 +36,13 @@ const Gallery = () => {
             </dialog>
           </div>
           <div className="flex">
-            <div className="absolute p-3 bg-color-3 rounded-full md:ml-[-10px]">
-              <CiSearch className=" text-4xl " />
+            <div className="absolute p-3.5 bg-color-3 rounded-full mt-2 md:mt-0 md:ml-[-10px]">
+              <CiSearch className="text-4xl md:text-3xl" />
             </div>
             <input
-              className="px-20 w-[400px] mt-2 md:mt-0 border-dashed border-2 rounded-full bg-color-4"
               type="text"
-              placeholder="Search images by Name"
+              className="px-20 py-4 md:py-3.5 mt-2 md:mt-0 border-dashed border-2 rounded-full bg-color-4"
+              placeholder="Search image by name"
             />
           </div>
         </div>

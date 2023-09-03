@@ -6,7 +6,7 @@ import AllSeniors from "./components/AllSeniors";
 const Alumnus = () => {
   return (
     <>
-      <div className="grid grid-cols-1 px-6 py-8">
+      <div className="grid grid-cols-1 px-6 pb-8 pt-24">
         <div className="col-span-1">
           <h1 className="text-4xl md:text-6xl font-6 f-color-1">
             Meet our <span className="f-color-3">Stars</span>

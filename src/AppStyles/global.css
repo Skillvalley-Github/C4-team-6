@@ -60,3 +60,22 @@ body::-webkit-scrollbar {
 .font-8{
     font-family: var(--font-8);
 }
+
+
+.text-hover{
+    color: var(--color-4);
+    transition: 4ms ease;
+}
+
+.text-hover:hover{
+    color: var(--color-3);
+}
+
+.text-hover-d{
+    color: var(--color-2);
+    transition: 4ms ease;
+}
+
+.text-hover-d:hover{
+    color: var(--color-3);
+}
