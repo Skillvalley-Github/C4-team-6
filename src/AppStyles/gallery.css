@@ -28,6 +28,8 @@ input#titleoffile {
 
 input::-webkit-input-placeholder {
   color: var(--color-3);
-  font-size: 20px;
+  width: 100%;
+  font-size: 15px;
+  padding-left:20px;
   font-family: var(--font-2);
 }

@@ -9,7 +9,7 @@ const Gallery = () => {
   return (
     <>
       <div>
-        <div className="px-10 py-10 space-y-2">
+        <div className="mx-10 py-10 space-y-2">
           <h1 className="text-4xl md:text-6xl font-6 f-color-1">
             Reunion <span className="f-color-3">Gallery</span>
           </h1>
@@ -28,7 +28,7 @@ const Gallery = () => {
               <form method="dialog" className="modal-box bg-color-2">
                 <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 <h3 className="font-bold text-lg font-8">Upload your memory</h3>
-                <SlCloudUpload className="absolute f-color-3 text-6xl ml-[200px] mt-[100px]" />
+                <SlCloudUpload className="absolute f-color-3 text-6xl ml-[120px] md:ml-[200px] mt-[100px]" />
                 <input className="mt-6" type="file" id='file'/>
                 <input type="text" id='titleoffile' placeholder="image title" className="py-4 my-3 bg-color-7 border-hidden" />
                 <button for="uploadfile" className="bg-color-4 w-full f-color-1 p-3 rounded-xl font-6 ">UPLOAD</button>
@@ -40,7 +40,7 @@ const Gallery = () => {
               <CiSearch className=" text-4xl " />
             </div>
             <input
-              className="px-20 w-[400px] mt-2 md:mt-0 border-dashed border-2 rounded-full bg-color-4"
+              className="px-10 mt-2 md:mt-0 border-dashed border-2 rounded-full bg-color-4"
               type="text"
               placeholder="Search images by Name"
             />
