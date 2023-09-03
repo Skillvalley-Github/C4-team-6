@@ -5,7 +5,7 @@ const Card = () => {
 
   return (
    <>
-   <div className='grid md:grid-cols-2 lg:grid-cols-3 py-16 mx-6 lg:mx-10 gap-10'>
+   <div className='grid md:grid-cols-2 lg:grid-cols-3 py-16 mx-2 gap-14'>
     {
         gallerydata.map((data)=>{
         return(
