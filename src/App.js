@@ -4,6 +4,7 @@
 import React, { Children } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./App/Routes/RootLayout";
+import { ChakraProvider } from '@chakra-ui/react'
 // ------------------------------------------------------
 // Screen components
 // ------------------------------------------------------
@@ -59,9 +60,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <>
+    <ChakraProvider>
       <RouterProvider router={router} />
-    </>
+    </ChakraProvider>
   );
 }
 
