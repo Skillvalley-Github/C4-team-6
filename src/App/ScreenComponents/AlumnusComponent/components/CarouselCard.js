@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { AlumniData } from "./AlumniData";
 import SpotLightCard from "./SpotLightCard";
 
-const CarouselCard = () => {
+const CarouselCard = ( {AlumniDataProps}) => {
   
   return (
     <div className="carousel carousel-center max-w-full pt-8 space-x-4">
-      {AlumniData.map((data) => {
+      {(AlumniDataProps?AlumniDataProps:AlumniData).map((data) => {
         return (
           <SpotLightCard
             key={data.key}

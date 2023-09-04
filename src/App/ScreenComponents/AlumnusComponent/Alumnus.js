@@ -2,8 +2,18 @@ import React from "react";
 import CarouselCard from "./components/CarouselCard";
 import { CiSearch } from "react-icons/ci";
 import AllSeniors from "./components/AllSeniors";
+import { getAlumini } from "../../config/supaFunctions";
+import { useQuery } from "react-query";
 
 const Alumnus = () => {
+  const { data: alumini, isLoading,isError } = useQuery(["alumini"], getAlumini);
+
+  if (isLoading) {
+    return <p>Loading...</p>; // You can replace this with a loading spinner or component
+  }
+
+  console.log(alumini);
+
   return (
     <>
       <div className="grid grid-cols-1 px-6 pb-8 pt-24">
@@ -12,11 +22,11 @@ const Alumnus = () => {
             Meet our <span className="f-color-3">Stars</span>
           </h1>
           <p className="text-sm md:text-lg font-1 f-color-1">
-            Spotlight alumnis of our campus
+            Spotlight alumni of our campus
           </p>
         </div>
         <div className="container md:col-span-1">
-          <CarouselCard />
+          <CarouselCard AlumniDataProps={alumini} />
         </div>
         <div className="container md:col-span-1 flex justify-center align-middle py-20">
           <div className="flex">
@@ -26,12 +36,12 @@ const Alumnus = () => {
             <input
               type="text"
               className="px-16 py-4 md:py-3.5 mt-2 md:mt-0 border-dashed border-2 rounded-full bg-color-4"
-              placeholder="Search seniors from feed"
+              placeholder="Search alumni from feed"
             />
           </div>
         </div>
         <div className="container md:col-span-1">
-          <AllSeniors />
+          <AllSeniors AlumniDataProps={alumini} />
         </div>
       </div>
     </>
