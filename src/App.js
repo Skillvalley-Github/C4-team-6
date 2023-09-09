@@ -15,8 +15,13 @@ import Alumnus from "./App/ScreenComponents/AlumnusComponent/Alumnus";
 import ViewProfile from "./App/ScreenComponents/AlumnusComponent/ViewProfile";
 import Gallery from "./App/ScreenComponents/GalleryComponent/Gallery";
 import AllWebiner from "./App/ScreenComponents/WebinerComponent/AllWebiner";
-import Adminpanel from "./App/Admindashboard/Adminpanel";
 
+
+import RootAdmin from "./App/Routes/RootAdmin";
+import AlumniList from "./App/Admindashboard/AdminLayout/AlumniListPage/AlumniList";
+import Dashboard from "./App/Admindashboard/AdminLayout/DashbordPage/Dashboard";
+import Studentlist from "./App/Admindashboard/AdminLayout/StudentListPage/Studentlist";
+import Scheduleevent from "./App/Admindashboard/AdminLayout/ScheduleEvent/Scheduleevent";
 
 
 // ------------------------------------------------------
@@ -55,11 +60,33 @@ const router = createBrowserRouter([
         path: "/all-webiner",
         element: <AllWebiner />
       },
-      {
-        path: "/adminpanel",
-        element: <Adminpanel/>
-      },
     ],
+  },
+  {
+    path: "/",
+    element: <RootAdmin/>,
+    children:[
+      {
+        path: "/dashboard",
+        element:<Dashboard/>
+      },
+      {
+        path: "/studentlist",
+        element:<Studentlist/>
+      },
+      {
+        path: "/alumnilist",
+        element:<AlumniList/>
+      },
+      {
+        path: "/Scheduleevent",
+        element:<Scheduleevent/>
+      },
+      {
+        path: "/profile",
+        element:<Scheduleevent/> 
+      },
+    ]
   },
 ]);
 
