@@ -15,6 +15,7 @@ import Alumnus from "./App/ScreenComponents/AlumnusComponent/Alumnus";
 import ViewProfile from "./App/ScreenComponents/AlumnusComponent/ViewProfile";
 import Gallery from "./App/ScreenComponents/GalleryComponent/Gallery";
 import AllWebiner from "./App/ScreenComponents/WebinerComponent/AllWebiner";
+import Adminpanel from "./App/Admindashboard/Adminpanel";
 
 
 
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/all-webiner",
         element: <AllWebiner />
+      },
+      {
+        path: "/adminpanel",
+        element: <Adminpanel/>
       },
     ],
   },
