@@ -17,6 +17,11 @@ import Gallery from "./App/ScreenComponents/GalleryComponent/Gallery";
 import AllWebiner from "./App/ScreenComponents/WebinerComponent/AllWebiner";
 
 
+import AlumniList from "./App/Admindashboard/AdminLayout/AlumniListPage/AlumniList";
+import Dashboard from "./App/Admindashboard/AdminLayout/DashbordPage/Dashboard";
+import Studentlist from "./App/Admindashboard/AdminLayout/StudentListPage/Studentlist";
+import Scheduleevent from "./App/Admindashboard/AdminLayout/ScheduleEvent/Scheduleevent";
+
 
 // ------------------------------------------------------
 // Web Routes
@@ -55,6 +60,30 @@ const router = createBrowserRouter([
         element: <AllWebiner />
       },
     ],
+  },
+  {
+    path: "/",
+    children:[
+      {
+        path: "/dashboard",
+        element:<Dashboard/>
+      },
+      {
+        path: "/studentlist",
+        element:<Studentlist/>
+      },
+      {
+        path: "/alumnilist",
+        element:<AlumniList/>
+      },
+      {
+        path: "/Scheduleevent",
+        element:<Scheduleevent/>
+      },
+      {
+        path: "/profile",
+      },
+    ]
   },
 ]);
 
