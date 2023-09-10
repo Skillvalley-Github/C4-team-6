@@ -31,3 +31,14 @@ export const getWebinarByPage = async (page,pageSize) => {
   if (error) return error;
   return webinar;
 }
+
+
+export const getWebinarById = async (key) => {
+  let { data: webinar, error } = await supabase
+    .from(TableNames.webinar)
+    .select("*")
+    .eq("key", key);
+  if (error) return error;
+  return webinar;
+};
+
