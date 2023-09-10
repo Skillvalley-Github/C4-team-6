@@ -49,4 +49,13 @@ export const getEvents = async () => {
   return events;
 };
 
+export const getEventsById = async (key) => {
+  let { data: events, error } = await supabase
+    .from(TableNames.events)
+    .select("*")
+    .eq("key", key);
+  if (error) return error;
+  return events;
+};
+
 
