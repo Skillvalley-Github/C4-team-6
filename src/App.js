@@ -17,7 +17,6 @@ import Gallery from "./App/ScreenComponents/GalleryComponent/Gallery";
 import AllWebiner from "./App/ScreenComponents/WebinerComponent/AllWebiner";
 
 
-import RootAdmin from "./App/Routes/RootAdmin";
 import AlumniList from "./App/Admindashboard/AdminLayout/AlumniListPage/AlumniList";
 import Dashboard from "./App/Admindashboard/AdminLayout/DashbordPage/Dashboard";
 import Studentlist from "./App/Admindashboard/AdminLayout/StudentListPage/Studentlist";
@@ -64,7 +63,6 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <RootAdmin/>,
     children:[
       {
         path: "/dashboard",
@@ -84,7 +82,6 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element:<Scheduleevent/> 
       },
     ]
   },
