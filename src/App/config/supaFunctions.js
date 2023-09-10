@@ -42,3 +42,11 @@ export const getWebinarById = async (key) => {
   return webinar;
 };
 
+
+export const getEvents = async () => {
+  let { data: events, error } = await supabase.from(TableNames.events).select("*");
+  if (error) return error;
+  return events;
+};
+
+
