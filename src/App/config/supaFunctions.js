@@ -58,4 +58,9 @@ export const getEventsById = async (key) => {
   return events;
 };
 
+export const getGallery = async () => {
+  let { data: gallery, error } = await supabase.from(TableNames.gallery).select("*");
+  if (error) return error;
+  return gallery;
+};
 
