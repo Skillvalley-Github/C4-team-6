@@ -17,3 +17,9 @@ export const getAlumniById = async (key) => {
   if (error) return error;
   return alumni;
 };
+export const getWebinar = async () => {
+  let { data: webinar, error } = await supabase.from(TableNames.webinar).select("*");
+  if (error) return error;
+  return webinar;
+}
+

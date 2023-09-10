@@ -8,5 +8,5 @@ export const TableNames = {
     students: "students",
     teachers: "teachers",
     users: "users",
-    webinars: "webinars",
+    webinar: "webinar",
 }
