@@ -23,3 +23,11 @@ export const getWebinar = async () => {
   return webinar;
 }
 
+export const getWebinarByPage = async (page,pageSize) => {
+  let { data: webinar, error } = await supabase
+    .from(TableNames.webinar)
+    .select("*")
+    .range(page,pageSize? page + pageSize:page+5);
+  if (error) return error;
+  return webinar;
+}
