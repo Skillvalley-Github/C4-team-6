@@ -4,7 +4,7 @@ import { PiCirclesFourFill } from "react-icons/pi";
 const Dashcard = (props)=> {
   return (
     <>
-    <div className='flex justify-between mx-6 md:mx-32 items-center'>
+    <div className='flex justify-between mx-6 md:mx-10 lg:mx-32 items-center'>
       <div className='flex space-x-6 items-center'>
       <img className='w-20 h-20 rounded-2xl' src={props.image} alt="" />
           <div className=''>

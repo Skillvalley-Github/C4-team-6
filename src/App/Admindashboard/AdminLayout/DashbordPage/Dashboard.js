@@ -9,7 +9,7 @@ const Dashboard = () => {
           <Adminsidebar/>
       </div>
       <div className='bg-color-2 w-full'>
-           <div className='grid md:flex gap-10 justify-between md:mx-10 lg:mx-32 mx-6 mt-20 f-color-2'>
+           <div className='grid md:flex gap-10 lg:justify-between justify-center md:mx-10 lg:mx-32 mx-6 mt-10 f-color-2'>
               <div className='flex bg-color-4 w-[300px] h-[150px] rounded-2xl space-x-10'>
                 <h1 className='font-7 mt-10 text-6xl'>100+</h1>
                 <p className='text-2xl font-3 mt-[100px]'>Students</p>

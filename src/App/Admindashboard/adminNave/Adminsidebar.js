@@ -6,9 +6,9 @@ import { HiMenuAlt3 } from "react-icons/hi";
 function Adminsidebar() {
 
   return (
-    <div className='flex justify-between lg:w-[400px] lg:h-[100vh]'>
-        <div className='flex-col justify-between f-color-2 mx-10 py-6'>
-            <div className="grid space-y-10">
+    <div className='flex justify-between sticky top-0'>
+        <div className='flex-col justify-between f-color-2 mx-10 py-6 w-[300px] '>
+            <div className="grid space-y-10 sticky">
                 <img src={logo1} className="h-[4rem] w-[4rem]" />
                 <div className=' md:flex hidden'>
                     <div className='grid space-y-10 font-3 text-2xl'>
