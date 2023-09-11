@@ -2,17 +2,17 @@ import React from "react";
 import CarouselCard from "./components/CarouselCard";
 import { CiSearch } from "react-icons/ci";
 import AllSeniors from "./components/AllSeniors";
-import { getAlumini } from "../../Config/supaFunctions";
+import { getAlumini,getAlumniById } from "../../config/supaFunctions";
 import { useQuery } from "react-query";
 
 const Alumnus = () => {
-  const { data: alumini, isLoading,isError } = useQuery(["alumini"], getAlumini);
-
+  const { data: alumini, isLoading, isError } = useQuery(["alumini"], getAlumini);
+const {data:alumniById,isLoading:isLoadingById,isError:isErrorById}=useQuery(["alumniById"],getAlumniById(1));
   if (isLoading) {
     return <p>Loading...</p>; // You can replace this with a loading spinner or component
   }
 
-  console.log(alumini);
+  console.log(alumniById);
 
   return (
     <>
