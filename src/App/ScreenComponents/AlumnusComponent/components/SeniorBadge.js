@@ -5,10 +5,14 @@ import "../../../../AppStyles/alumnus.css";
 import { useNavigate } from "react-router-dom";
 
 const SeniorBadge = (props) => {
-    const navigate = useNavigate();
-    function redirect() {
-        navigate('/view-alumni-individual')
-    }
+  const navigate = useNavigate();
+  // console.log(navigate)
+  // console.log("props.key:", props.supabaseKey)
+  // console.log("props.name:", props.name)
+  // console.log("props", props)
+  function redirect() {
+    navigate('/view-alumni-individual', { state: { key: props.supabaseKey ,all:props.all} })
+  }
   return (
     <div className="w-full md:w-1/2">
       <div className="grid grid-cols-3 py-4">

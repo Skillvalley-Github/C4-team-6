@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const SpotLightCard = (props) => {
   const navigate = useNavigate();
     function redirect() {
-        navigate('/view-alumni-individual')
+        navigate('/view-alumni-individual', { state: { key: props.supabaseKey ,all:props.all} })
     }
   return (
     <div className="carousel-item w-full md:w-1/2">
