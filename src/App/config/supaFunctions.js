@@ -10,6 +10,7 @@ export const getAlumini = async () => {
 //get alumni by id
 //here id is the key of the alumni table in supabase since it is the primary key
 export const getAlumniById = async (key) => {
+  // console.log("key:", key)
   let { data: alumni, error } = await supabase
     .from(TableNames.alumni)
     .select("*")

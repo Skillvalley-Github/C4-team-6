@@ -10,10 +10,12 @@ const CarouselCard = ( {AlumniDataProps}) => {
         return (
           <SpotLightCard
             key={data.key}
+            supabaseKey={data.key}
             image={data.image}
             name={data.name}
             passoutYear={data.passoutYear}
             designation={data.designation}
+            all={data}
           />
         );
       })}

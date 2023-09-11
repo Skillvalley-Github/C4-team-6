@@ -7,12 +7,12 @@ import { useQuery } from "react-query";
 
 const Alumnus = () => {
   const { data: alumini, isLoading, isError } = useQuery(["alumini"], getAlumini);
-const {data:alumniById,isLoading:isLoadingById,isError:isErrorById}=useQuery(["alumniById"],getAlumniById(1));
+
   if (isLoading) {
     return <p>Loading...</p>; // You can replace this with a loading spinner or component
   }
 
-  console.log(alumniById);
+  // console.log(alumini);
 
   return (
     <>
