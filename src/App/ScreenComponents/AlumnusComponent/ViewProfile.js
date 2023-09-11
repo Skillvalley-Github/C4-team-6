@@ -5,7 +5,7 @@ const ViewProfile = () => {
     <div className='grid grid-cols-3'>
       <div className="col-span-1">
         <figure>
-            <img src="" alt="alumni" />
+            <img src="" alt="alumni-image" />
         </figure>
       </div>
       <div className="col-span-2"></div>
