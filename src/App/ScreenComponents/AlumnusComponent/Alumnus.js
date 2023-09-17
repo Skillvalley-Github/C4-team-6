@@ -2,7 +2,7 @@ import React from "react";
 import CarouselCard from "./components/CarouselCard";
 import { CiSearch } from "react-icons/ci";
 import AllSeniors from "./components/AllSeniors";
-import { getAlumini,getAlumniById } from "../../Config/supaFunctions";
+import { getAlumini,getAlumniById } from "../../config/supaFunctions";
 import { useQuery } from "react-query";
 
 const Alumnus = () => {
