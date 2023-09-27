@@ -4,7 +4,11 @@ import EventList from "./Components/EventList";
 import { EventData } from "./Components/EventData";
 import "../../../AppStyles/webinars.css";
 import { useQuery } from "react-query";
-import { getWebinar, getWebinarByPage, getWebinarlength } from "../../config/supaFunctions";
+import {
+  getWebinar,
+  getWebinarByPage,
+  getWebinarlength,
+} from "../../Config/supaFunctions";
 import Pagination from "./Components/Pagination";
 
 const AllWebiner = () => {
@@ -22,14 +26,18 @@ const AllWebiner = () => {
   const startCount = (currentPage - 1) * itemsPerPage;
 
   // Function to fetch data for the current page
-  const { data: webinars, isLoading: webinarsLoading, isError: webinarsError } = useQuery(
+  const {
+    data: webinars,
+    isLoading: webinarsLoading,
+    isError: webinarsError,
+  } = useQuery(
     ["webinars", startCount, itemsPerPage],
     () => getWebinarByPage(startCount, itemsPerPage), // Modify your query function to accept startCount and itemsPerPage
     {
       enabled: totalItems > 0, // Only fetch data if totalItems is available
     }
   );
-// console.log(webinars)
+  // console.log(webinars)
   // Handle page change
   const onPageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -43,7 +51,8 @@ const AllWebiner = () => {
             Mentorship <span className="f-color-3">Program</span>
           </h1>
           <p className="text-sm md:text-lg font-1 f-color-1">
-            All the webinars are scheduled as per students' request for mentorship
+            All the webinars are scheduled as per students' request for
+            mentorship
           </p>
         </div>
         <div className="col-span-1">
@@ -73,8 +82,13 @@ const AllWebiner = () => {
           <p>Error fetching data</p>
         ) : (
           <>
-            <EventList webinars={webinars} /> {/* Pass the fetched webinars to your EventList component */}
-            <Pagination itemsPerPage={itemsPerPage} totalItems={totalItems} onPageChange={onPageChange} />
+            <EventList webinars={webinars} />{" "}
+            {/* Pass the fetched webinars to your EventList component */}
+            <Pagination
+              itemsPerPage={itemsPerPage}
+              totalItems={totalItems}
+              onPageChange={onPageChange}
+            />
           </>
         )}
       </div>
