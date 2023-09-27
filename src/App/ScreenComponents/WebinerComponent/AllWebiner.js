@@ -29,7 +29,7 @@ const AllWebiner = () => {
       enabled: totalItems > 0, // Only fetch data if totalItems is available
     }
   );
-console.log(webinars)
+// console.log(webinars)
   // Handle page change
   const onPageChange = (newPage) => {
     setCurrentPage(newPage);
