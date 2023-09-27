@@ -4,7 +4,7 @@
 import React, { Children } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./App/Routes/RootLayout";
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from "@chakra-ui/react";
 // ------------------------------------------------------
 // Screen components
 // ------------------------------------------------------
@@ -16,13 +16,11 @@ import ViewProfile from "./App/ScreenComponents/AlumnusComponent/ViewProfile";
 import Gallery from "./App/ScreenComponents/GalleryComponent/Gallery";
 import AllWebiner from "./App/ScreenComponents/WebinerComponent/AllWebiner";
 
-
 import AlumniList from "./App/Admindashboard/AdminLayout/AlumniListPage/AlumniList";
 import Dashboard from "./App/Admindashboard/AdminLayout/DashbordPage/Dashboard";
 import Studentlist from "./App/Admindashboard/AdminLayout/StudentListPage/Studentlist";
 import Scheduleevent from "./App/Admindashboard/AdminLayout/ScheduleEvent/Scheduleevent";
 import Createevnet from "./App/Admindashboard/AdminLayout/Createevent/Createevnet";
-
 
 // ------------------------------------------------------
 // Web Routes
@@ -30,65 +28,82 @@ import Createevnet from "./App/Admindashboard/AdminLayout/Createevent/Createevne
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout />,
     children: [
       {
         path: "/",
-        element: <HeroPage />
+        element: <HeroPage />,
       },
       {
         path: "/login",
-        element: <Login />
+        element: <Login />,
       },
       {
         path: "/signup",
-        element: <Signup />
-      },
-      {
-        path: "/alumnus",
-        element: <Alumnus />
-      },
-      {
-        path: "/view-alumni-individual",
-        element: <ViewProfile />
-      },
-      {
-        path: "/gallery",
-        element: <Gallery />
-      },
-      {
-        path: "/all-webiner",
-        element: <AllWebiner />
+        element: <Signup />,
       },
     ],
   },
   {
     path: "/",
-    children:[
+    element: <RootLayout />,
+    children: [
+      // {
+      //   path: "/",
+      //   element: <HeroPage />,
+      // },
+      // {
+      //   path: "/login",
+      //   element: <Login />,
+      // },
+      // {
+      //   path: "/signup",
+      //   element: <Signup />,
+      // },
+      {
+        path: "/alumnus",
+        element: <Alumnus />,
+      },
+      {
+        path: "/view-alumni-individual",
+        element: <ViewProfile />,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery />,
+      },
+      {
+        path: "/all-webiner",
+        element: <AllWebiner />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    children: [
       {
         path: "/dashboard",
-        element:<Dashboard/>
+        element: <Dashboard />,
       },
       {
         path: "/studentlist",
-        element:<Studentlist/>
+        element: <Studentlist />,
       },
       {
         path: "/alumnilist",
-        element:<AlumniList/>
+        element: <AlumniList />,
       },
       {
         path: "/Scheduleevent",
-        element:<Scheduleevent/>
+        element: <Scheduleevent />,
       },
       {
         path: "/profile",
       },
       {
         path: "/createevent",
-        element:<Createevnet/>
+        element: <Createevnet />,
       },
-    ]
+    ],
   },
 ]);
 
