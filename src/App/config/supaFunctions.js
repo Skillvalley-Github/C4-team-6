@@ -24,6 +24,11 @@ export const getWebinar = async () => {
   return webinar;
 }
 
+export const getWebinarlength=async ()=>{
+  let { data: webinar, error } = await supabase.from(TableNames.webinar).select("*");
+  if (error) return error;
+  return webinar.length;
+}
 export const getWebinarByPage = async (page,pageSize) => {
   let { data: webinar, error } = await supabase
     .from(TableNames.webinar)
