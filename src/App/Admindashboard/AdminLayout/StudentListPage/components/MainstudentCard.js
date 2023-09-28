@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import StudentListcard from './StudentListcard';
 import Pagination from '../../../../ScreenComponents/WebinerComponent/Components/Pagination';
 import { useQuery } from 'react-query';
-import { getStudentsbyPage } from '../../../../Config/supaFunctions';
+import { getStudentsbyPage } from '../../../../config/supaFunctions';
 import { studentlistdata } from './data';
 
 const itemsPerPage = 5; // Number of items to display per page
