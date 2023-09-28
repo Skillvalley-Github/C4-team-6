@@ -9,8 +9,10 @@ import { ChakraProvider } from "@chakra-ui/react";
 // Screen components
 // ------------------------------------------------------
 import HeroPage from "./App/ScreenComponents/HeroPage";
-import Login from "./App/ScreenComponents/UserEntryComponents/Login";
-import Signup from "./App/ScreenComponents/UserEntryComponents/Signup";
+import AlumniLogin from "./App/ScreenComponents/AlumniUserEntryComponents/AlumniLogin";
+import AlumniSignup from "./App/ScreenComponents/AlumniUserEntryComponents/AlumniSignup";
+import StudentLogin from "./App/ScreenComponents/StudentUserEntry/StudentLogin";
+import StudentSignup from "./App/ScreenComponents/StudentUserEntry/StudentSignup";
 import Alumnus from "./App/ScreenComponents/AlumnusComponent/Alumnus";
 import ViewProfile from "./App/ScreenComponents/AlumnusComponent/ViewProfile";
 import Gallery from "./App/ScreenComponents/GalleryComponent/Gallery";
@@ -34,12 +36,20 @@ const router = createBrowserRouter([
         element: <HeroPage />,
       },
       {
-        path: "/login",
-        element: <Login />,
+        path: "/alumni-login",
+        element: <AlumniLogin />,
       },
       {
-        path: "/signup",
-        element: <Signup />,
+        path: "/alumni-signup",
+        element: <AlumniSignup />,
+      },
+      {
+        path: "/student-login",
+        element: <StudentLogin />,
+      },
+      {
+        path: "/student-signup",
+        element: <StudentSignup />,
       },
     ],
   },
@@ -47,18 +57,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     children: [
-      // {
-      //   path: "/",
-      //   element: <HeroPage />,
-      // },
-      // {
-      //   path: "/login",
-      //   element: <Login />,
-      // },
-      // {
-      //   path: "/signup",
-      //   element: <Signup />,
-      // },
       {
         path: "/alumnus",
         element: <Alumnus />,

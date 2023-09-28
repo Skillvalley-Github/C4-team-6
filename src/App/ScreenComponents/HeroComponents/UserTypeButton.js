@@ -5,12 +5,16 @@ import { CiSearch } from "react-icons/ci";
 const UserTypeButton = () => {
   const navigate = useNavigate();
 
-  const redirectToSignIn = () => {
-    navigate("/login");
+  const redirectToAlumniSignIn = () => {
+    navigate("/alumni-login");
+  };
+
+  const redirectToStudentSignIn = () => {
+    navigate("/student-login");
   };
   return (
     <>
-      <button className="flex" onClick={redirectToSignIn}>
+      <button className="flex" onClick={redirectToAlumniSignIn}>
         <div className="absolute p-5 bg-color-3 rounded-full mt-1 md:mt-0 md:ml-[-10px]">
           <CiSearch className="text-5xl md:text-4xl" />
         </div>
@@ -19,7 +23,7 @@ const UserTypeButton = () => {
           <span className=" btn-font font-7 text-md">ALUMNI</span>
         </div>
       </button>
-      <button className="flex" onClick={redirectToSignIn}>
+      <button className="flex" onClick={redirectToStudentSignIn}>
         <div className="absolute p-5 bg-color-3 rounded-full mt-1 md:mt-0 md:ml-[-10px]">
           <CiSearch className="text-5xl md:text-4xl" />
         </div>
