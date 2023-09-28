@@ -58,7 +58,7 @@ function Scheduleevent() {
                 <input className='border border-black p-2 w-[200px] bg-white' type="file" />
               </div>
               <div className='flex justify-center'>
-                <input className='px-10 py-2 bg-color-4 rounded-2xl' type="submit" />
+                <button className='px-10 py-2 bg-color-4 rounded-2xl text-white' type="submit">submit</button>
               </div>
             </div>
           </form>
