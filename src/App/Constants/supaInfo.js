@@ -9,4 +9,5 @@ export const TableNames = {
     teachers: "teachers",
     users: "users",
     webinar: "webinar",
+    test: "test",
 }
