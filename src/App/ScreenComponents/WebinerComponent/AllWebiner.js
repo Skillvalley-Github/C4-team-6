@@ -32,12 +32,14 @@ const AllWebiner = () => {
     isError: webinarsError,
   } = useQuery(
     ["webinars", startCount, itemsPerPage],
-    () => getWebinarByPage(startCount, itemsPerPage), // Modify your query function to accept startCount and itemsPerPage
-    {
-      enabled: totalItems > 0, // Only fetch data if totalItems is available
-    }
+    () => getWebinarByPage(startCount, itemsPerPage)
   );
-  // console.log(webinars)
+  console.log("totalItems :", totalItems)
+  console.log("itemsPerPage :", itemsPerPage)
+  console.log("startCount :", startCount)
+
+  console.log("webinarsLength :", webinarsLength)
+  console.log("webinars :", webinars)
   // Handle page change
   const onPageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -58,22 +60,7 @@ const AllWebiner = () => {
         <div className="col-span-1">
           <FilterEvents />
         </div>
-        <div className="col-span-1 space-y-8">
-          {webinars.map((data) => {
-            return (
-              <EventList
-                key={data.eventId}
-                eventTitle={data.eventTitle}
-                eventDate={data.eventDate}
-                eventBanner={data.eventBanner}
-                shortDescription={data.shortDescription}
-                meetLink={data.meetLink}
-                speakerName={data.speakerName}
-                speakerImage={data.speakerImage}
-              />
-            );
-          })}
-        </div>
+
       </div>
       <div className="mt-12">
         {webinarsLoading ? (
@@ -82,8 +69,24 @@ const AllWebiner = () => {
           <p>Error fetching data</p>
         ) : (
           <>
-            <EventList webinars={webinars} />{" "}
+            {/* <EventList webinars={webinars} />{" "} */}
             {/* Pass the fetched webinars to your EventList component */}
+            (<div className="col-span-1 space-y-8">
+              {webinars.map((data) => {
+                return (
+                  <EventList
+                    key={data.eventId}
+                    eventTitle={data.eventTitle}
+                    eventDate={data.eventDate}
+                    eventBanner={data.eventBanner}
+                    shortDescription={data.shortDescription}
+                    meetLink={data.meetLink}
+                    speakerName={data.speakerName}
+                    speakerImage={data.speakerImage}
+                  />
+                );
+              })}
+            </div>)
             <Pagination
               itemsPerPage={itemsPerPage}
               totalItems={totalItems}

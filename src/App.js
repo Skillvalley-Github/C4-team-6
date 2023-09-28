@@ -25,23 +25,23 @@ import Scheduleevent from "./App/Admindashboard/AdminLayout/ScheduleEvent/Schedu
 // Web Routes
 // ------------------------------------------------------
 const router = createBrowserRouter([
-  {
-    path: "/",
-    children: [
-      {
-        path: "/",
-        element: <HeroPage />,
-      },
-      {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/signup",
-        element: <Signup />,
-      },
-    ],
-  },
+  // {
+  //   path: "/",
+  //   children: [
+  //     {
+  //       path: "/",
+  //       element: <HeroPage />,
+  //     },
+  //     {
+  //       path: "/login",
+  //       element: <Login />,
+  //     },
+  //     {
+  //       path: "/signup",
+  //       element: <Signup />,
+  //     },
+  //   ],
+  // },
   {
     path: "/",
     element: <RootLayout />,
@@ -76,30 +76,30 @@ const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/",
-    children: [
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "/studentlist",
-        element: <Studentlist />,
-      },
-      {
-        path: "/alumnilist",
-        element: <AlumniList />,
-      },
-      {
-        path: "/Scheduleevent",
-        element: <Scheduleevent />,
-      },
-      {
-        path: "/profile",
-      },
-    ],
-  },
+  // {
+  //   path: "/",
+  //   children: [
+  //     {
+  //       path: "/dashboard",
+  //       element: <Dashboard />,
+  //     },
+  //     {
+  //       path: "/studentlist",
+  //       element: <Studentlist />,
+  //     },
+  //     {
+  //       path: "/alumnilist",
+  //       element: <AlumniList />,
+  //     },
+  //     {
+  //       path: "/Scheduleevent",
+  //       element: <Scheduleevent />,
+  //     },
+  //     {
+  //       path: "/profile",
+  //     },
+  //   ],
+  // },
 ]);
 
 function App() {
