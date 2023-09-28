@@ -8,7 +8,7 @@ import {
   getWebinar,
   getWebinarByPage,
   getWebinarlength,
-} from "../../Config/supaFunctions";
+} from "../../config/supaFunctions";
 import Pagination from "./Components/Pagination";
 
 const AllWebiner = () => {
