@@ -1,0 +1,12 @@
+INSERT INTO students (name, title, image)
+VALUES
+  ('Michael Wilson', '7th sem CSE',' Full Stack Developer', @imageUrl),
+  ('Emily Johnson', '3rd sem ECE',' Data Analyst', @imageUrl),
+  ('Sophia Davis', '5th sem IT',' Backend Engineer', @imageUrl),
+  ('Aiden Smith', '6th sem Mech',' Robotics Engineer', @imageUrl),
+  ('Olivia Martin', '4th sem CSE',' Bioinformatics Specialist', @imageUrl),
+  ('Ethan Brown', '8th sem Civil',' Chemical Engineer', @imageUrl),
+  ('Liam Taylor', '2nd sem Civil',' Construction Manager', @imageUrl),
+  ('Ava White', '5th sem EE',' Electrical Engineer', @imageUrl),
+  ('Isabella Jones', '7th sem CSE',' Environmental Scientist', @imageUrl),
+  ('Noah Anderson', '4th sem CSE',' Architectural Designer', @imageUrl);

@@ -70,3 +70,25 @@ export const getGallery = async () => {
   return gallery;
 };
 
+export const getStudents = async () => {
+  let { data: students, error } = await supabase.from(TableNames.students).select("*");
+  if (error) return error;
+  return students;
+}
+export const getStudentsById = async (key) => {
+  let { data: students, error } = await supabase
+    .from(TableNames.students)
+    .select("*")
+    .eq("key", key);
+  if (error) return error;
+  return students;
+}
+
+export const getStudentsbyPage = async (page,pageSize) => {
+  let { data: students, error } = await supabase
+    .from(TableNames.students)
+    .select("*")
+    .range(page,pageSize? page + pageSize:page+5);
+  if (error) return error;
+  return students;
+}
