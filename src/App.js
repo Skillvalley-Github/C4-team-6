@@ -22,7 +22,6 @@ import AlumniList from "./App/Admindashboard/AdminLayout/AlumniListPage/AlumniLi
 import Dashboard from "./App/Admindashboard/AdminLayout/DashbordPage/Dashboard";
 import Studentlist from "./App/Admindashboard/AdminLayout/StudentListPage/Studentlist";
 import Scheduleevent from "./App/Admindashboard/AdminLayout/ScheduleEvent/Scheduleevent";
-import Createevnet from "./App/Admindashboard/AdminLayout/Createevent/Createevnet";
 
 // ------------------------------------------------------
 // Web Routes
@@ -96,10 +95,6 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-      },
-      {
-        path: "/createevent",
-        element: <Createevnet />,
       },
     ],
   },

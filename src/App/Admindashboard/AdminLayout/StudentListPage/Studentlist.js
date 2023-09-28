@@ -1,6 +1,6 @@
 import React from 'react'
 import Adminsidebar from '../../adminNave/Adminsidebar'
-import Maincard from '../DashbordPage/components/Maincard'
+import MainstudentCard from './components/MainstudentCard'
 
 const Studentlist = () => {
   return (
@@ -15,7 +15,7 @@ const Studentlist = () => {
                 <h1>View All</h1>
               </div>
           </div>
-          <Maincard/>
+          <MainstudentCard/>
       </div>
     </div>
   )
