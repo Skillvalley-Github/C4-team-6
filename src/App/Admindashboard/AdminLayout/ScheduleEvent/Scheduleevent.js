@@ -8,9 +8,9 @@ function Scheduleevent() {
         <div>
           <Adminsidebar />
         </div>
-        <div className='flex justify-center'>
+        <div className='flex justify-center w-full'>
           <form>
-            <div className='grid justify-center bg-color-2 space-y-6 mt-6 w-[400px] md:w-[500px] py-10 font-2'>
+            <div className='grid justify-center bg-color-2 space-y-6 mt-6 w-[450px] md:w-[600px] lg:w-[800px] py-10 font-2'>
               <div>
                 <h1 className='text-center text-2xl font-bold'>Create Event</h1>
               </div>
@@ -32,11 +32,11 @@ function Scheduleevent() {
                 <label className='w-[150px]'>Event banner</label>
                 <input className='border border-black p-2 w-[200px] bg-white' type="file" />
               </div>
-              <div className='grid md:flex md:space-x-4 items-center '>
+              <div className='grid md:flex md:space-x-4 items-center'>
                 <label className='w-[150px]'>Event Description</label>
                 <textarea
                   className='h-[100px]'
-                  placeholder="Enter Event Description"
+                  placeholder="Event Description"
                 />
               </div>
               <div className='grid md:flex md:space-x-4 items-center '>
