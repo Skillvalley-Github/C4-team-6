@@ -38,7 +38,7 @@ const Alumnus = () => {
         <div className="container md:col-span-1">
           <CarouselCard AlumniDataProps={alumini} />
         </div>
-        <div className="container md:col-span-1 flex justify-center align-middle py-20">
+        <div className="container md:col-span-1 flex justify-center align-middle py-16">
           <div className="flex">
             <div className="absolute p-3 bg-color-3 rounded-full mt-2 md:mt-0 md:ml-[-10px]">
               <CiSearch className="text-4xl md:text-3xl" />

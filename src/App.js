@@ -22,6 +22,8 @@ import AlumniList from "./App/Admindashboard/AdminLayout/AlumniListPage/AlumniLi
 import Dashboard from "./App/Admindashboard/AdminLayout/DashbordPage/Dashboard";
 import Studentlist from "./App/Admindashboard/AdminLayout/StudentListPage/Studentlist";
 import Scheduleevent from "./App/Admindashboard/AdminLayout/ScheduleEvent/Scheduleevent";
+import TestAdmin from "./App/Admindashboard/TestAdmin";
+
 
 // ------------------------------------------------------
 // Web Routes
@@ -95,6 +97,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
+      },
+      {
+        path: "/testing",
+        element: <TestAdmin />,
       },
     ],
   },

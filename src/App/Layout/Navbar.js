@@ -10,9 +10,9 @@ const Navbar = () => {
     <>
       <div className="navbar bg-color-4 md:px-3 pt-4 fixed z-50">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">
+          <Link to="/alumnus" className="btn btn-ghost normal-case text-xl">
             <img src={logo1} className="h-[3rem] w-[3rem]" />
-          </a>
+          </Link>
         </div>
         <div className="flex-none gap-2">
           <div

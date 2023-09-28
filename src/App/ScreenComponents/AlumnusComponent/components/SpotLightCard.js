@@ -3,7 +3,7 @@ import "../../../../AppStyles/colors.css";
 import "../../../../AppStyles/global.css";
 import "../../../../AppStyles/alumnus.css";
 import alumni from "../../../Constants/alumni.png";
-import { CiShare1 } from "react-icons/ci";
+import { PiCirclesFourFill } from "react-icons/pi";
 import { MdWorkspacesFilled } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
@@ -42,7 +42,7 @@ const SpotLightCard = (props) => {
                 </p>
               </div>
               <button className="btn btn-sm sm:btn-sm md:btn-sm lg:btn-md btn-hover" onClick={redirect}>
-                <CiShare1 className='' />
+                <PiCirclesFourFill className='' />
               </button>
             </div>
           </div>
