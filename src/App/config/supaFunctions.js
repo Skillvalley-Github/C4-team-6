@@ -18,6 +18,14 @@ export const getAlumniById = async (key) => {
   if (error) return error;
   return alumni;
 };
+export const getAlumniByPage = async (page,pageSize) => {
+  let { data: alumni, error } = await supabase
+    .from(TableNames.alumni)
+    .select("*")
+    .range(page,pageSize? page + pageSize:page+5);
+  if (error) return error;
+  return alumni;
+}
 export const getWebinar = async () => {
   let { data: webinar, error } = await supabase.from(TableNames.webinar).select("*");
   if (error) return error;
