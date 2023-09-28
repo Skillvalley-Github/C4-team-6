@@ -42,64 +42,64 @@ const router = createBrowserRouter([
   //     },
   //   ],
   // },
-  {
-    path: "/",
-    element: <RootLayout />,
-    children: [
-      // {
-      //   path: "/",
-      //   element: <HeroPage />,
-      // },
-      // {
-      //   path: "/login",
-      //   element: <Login />,
-      // },
-      // {
-      //   path: "/signup",
-      //   element: <Signup />,
-      // },
-      {
-        path: "/alumnus",
-        element: <Alumnus />,
-      },
-      {
-        path: "/view-alumni-individual",
-        element: <ViewProfile />,
-      },
-      {
-        path: "/gallery",
-        element: <Gallery />,
-      },
-      {
-        path: "/all-webiner",
-        element: <AllWebiner />,
-      },
-    ],
-  },
   // {
   //   path: "/",
+  //   element: <RootLayout />,
   //   children: [
+  //     // {
+  //     //   path: "/",
+  //     //   element: <HeroPage />,
+  //     // },
+  //     // {
+  //     //   path: "/login",
+  //     //   element: <Login />,
+  //     // },
+  //     // {
+  //     //   path: "/signup",
+  //     //   element: <Signup />,
+  //     // },
   //     {
-  //       path: "/dashboard",
-  //       element: <Dashboard />,
+  //       path: "/alumnus",
+  //       element: <Alumnus />,
   //     },
   //     {
-  //       path: "/studentlist",
-  //       element: <Studentlist />,
+  //       path: "/view-alumni-individual",
+  //       element: <ViewProfile />,
   //     },
   //     {
-  //       path: "/alumnilist",
-  //       element: <AlumniList />,
+  //       path: "/gallery",
+  //       element: <Gallery />,
   //     },
   //     {
-  //       path: "/Scheduleevent",
-  //       element: <Scheduleevent />,
-  //     },
-  //     {
-  //       path: "/profile",
+  //       path: "/all-webiner",
+  //       element: <AllWebiner />,
   //     },
   //   ],
   // },
+  {
+    path: "/",
+    children: [
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/studentlist",
+        element: <Studentlist />,
+      },
+      {
+        path: "/alumnilist",
+        element: <AlumniList />,
+      },
+      {
+        path: "/Scheduleevent",
+        element: <Scheduleevent />,
+      },
+      {
+        path: "/profile",
+      },
+    ],
+  },
 ]);
 
 function App() {

@@ -60,6 +60,7 @@ const Maincard = () => {
             )}
             <Pagination
               itemsPerPage={itemsPerPage}
+              key={currentPage}
               totalItems={totalItems}
               onPageChange={onPageChange}
             />
