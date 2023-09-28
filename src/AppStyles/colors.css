@@ -60,10 +60,21 @@
 .bg-color-6{
     background-color: var(--color-6);
 }
-
+/* ------------------------------ */
+/* COLOR-7 */
+/* ------------------------------ */
 .f-color-7{
     color: var(--color-7);
 }
 .bg-color-7{
     background-color: var(--color-7);
+}
+/* ------------------------------ */
+/* COLOR-8 */
+/* ------------------------------ */
+.f-color-8{
+    color: var(--color-8);
+}
+.bg-color-8{
+    background-color: var(--color-8);
 }

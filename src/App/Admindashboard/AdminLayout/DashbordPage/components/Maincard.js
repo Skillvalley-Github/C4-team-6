@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Dashcard from './Dashcard';
 import { useQuery } from 'react-query';
-import { getStudents, getStudentsbyPage } from '../../../../config/supaFunctions';
+import { getStudents, getStudentsbyPage } from '../../../../Config/supaFunctions';
 import Pagination from '../../../../ScreenComponents/WebinerComponent/Components/Pagination';
 
 const Maincard = () => {
