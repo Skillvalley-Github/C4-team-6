@@ -20,6 +20,9 @@ const AlumniSignup = () => {
     const { user, error } = await supabase.auth.signUp({
       email,
       password,
+      options: {
+        full_name: { name }
+      }
     });
 
     if (error) {
