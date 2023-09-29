@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "react-query"; // Import React Query
-import supabase from '../../config/supabase'; // Import Supabase client
+import supabase from "../../Config/supabase"; // Import Supabase client
+import WebHeader from "../HeroComponents/WebHeader";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const AlumniSignup = () => {
   const navigate = useNavigate();
@@ -21,8 +25,8 @@ const AlumniSignup = () => {
       email,
       password,
       options: {
-        full_name: { name }
-      }
+        full_name: { name },
+      },
     });
 
     if (error) {
@@ -37,6 +41,12 @@ const AlumniSignup = () => {
       // Use the React Query mutation
       await signupMutation.mutateAsync();
 
+      // Show a success toast
+      toast.success("Account created successfully! Now Login", {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 3000, // Close the toast after 3 seconds
+      });
+
       // Redirect or perform other actions upon successful registration
       console.log("User registered successfully:", signupMutation.data);
     } catch (error) {
@@ -49,10 +59,13 @@ const AlumniSignup = () => {
       <div className="grid grid-cols-1 px-6 pt-5">
         <div className="col-span-1">
           {/* You may include your WebHeader component here */}
+          <WebHeader />
         </div>
-        <div className="col-span-1 flex flex-col justify-center align-middle pt-10 md:pt-12">
+        <div className="col-span-1 flex flex-col justify-center align-middle pt-5">
           <div className="form-upper w-[100%]">
-            <p className="font-1 f-color-2 text-center w-[100%]">create account as</p>
+            <p className="font-1 f-color-2 text-center w-[100%]">
+              create account as
+            </p>
             <p className="font-7 f-color-2 text-5xl text-center w-[100%]">
               ALUMNI
             </p>
@@ -79,8 +92,18 @@ const AlumniSignup = () => {
               onChange={(e) => setPassword(e.target.value)}
               className="input w-full max-w-xs md:max-w-md rounded-full p-8 bg-color-8 placeholder-color-text no-focus-outline"
             />
+            <button
+              className="btn mt-8 w-[90%] md:w-[30%] h-[3.5rem] rounded-full create-acc-btn font-8 text-md text-center"
+              onClick={handleSignup}
+              disabled={signupMutation.isLoading} // Disable button during loading
+            >
+              {signupMutation.isLoading ? "Signing Up..." : "SIGN UP"}
+            </button>
+            {error && (
+              <div className="text-red-500 text-center mt-4">{error}</div>
+            )}
           </div>
-          <div className="form-lower">
+          <div className="form-lower pb-10">
             <p className="font-7 f-color-2 text-2xl text-center w-[100%] mt-8">
               OR
             </p>
@@ -94,21 +117,16 @@ const AlumniSignup = () => {
               <div className="col-span-2">
                 <button
                   className="btn mt-10 w-[100%] h-[3.5rem] rounded-full create-acc-btn font-8 text-md text-center"
-                  onClick={handleSignup}
-                  disabled={signupMutation.isLoading} // Disable button during loading
+                  onClick={loginAccount}
                 >
-                  {signupMutation.isLoading ? "Signing Up..." : "SIGN UP"}
+                  LOGIN
                 </button>
               </div>
             </div>
           </div>
         </div>
+        <ToastContainer />
       </div>
-      {error && (
-        <div className="text-red-500 text-center mt-4">
-          {error}
-        </div>
-      )}
     </>
   );
 };

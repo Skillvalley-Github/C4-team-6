@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 .placeholder-color-text::placeholder{
-    color: var(--color-4)
+    color: var(--color-7)
 }
 .no-focus-outline:focus{
     outline: none;
