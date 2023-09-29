@@ -1,30 +1,51 @@
-// ------------------------------------------------------
-// Prerequisites
-// ------------------------------------------------------
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// ------------------------------------------------------
-// Styles
-// ------------------------------------------------------
-import "../../../AppStyles/global.css";
-import "../../../AppStyles/colors.css";
-import "../../../AppStyles/Login-Signup.css";
-// ------------------------------------------------------
-// Components
-// ------------------------------------------------------
-import WebHeader from "../HeroComponents/WebHeader";
+import { useMutation } from "react-query"; // Import React Query
+import supabase from '../../config/supabase'; // Import Supabase client
 
 const AlumniSignup = () => {
   const navigate = useNavigate();
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+
   const loginAccount = () => {
     navigate("/alumni-login");
   };
+
+  // Define a mutation function for signing up
+  const signupMutation = useMutation(async () => {
+    const { user, error } = await supabase.auth.signUp({
+      email,
+      password,
+    });
+
+    if (error) {
+      throw new Error(error.message);
+    }
+
+    return user;
+  });
+
+  const handleSignup = async () => {
+    try {
+      // Use the React Query mutation
+      await signupMutation.mutateAsync();
+
+      // Redirect or perform other actions upon successful registration
+      console.log("User registered successfully:", signupMutation.data);
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
   return (
     <>
       <div className="grid grid-cols-1 px-6 pt-5">
         <div className="col-span-1">
-          <WebHeader />
+          {/* You may include your WebHeader component here */}
         </div>
         <div className="col-span-1 flex flex-col justify-center align-middle pt-10 md:pt-12">
           <div className="form-upper w-[100%]">
@@ -37,16 +58,22 @@ const AlumniSignup = () => {
             <input
               type="text"
               placeholder="# enter your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="input w-full max-w-xs md:max-w-md rounded-full p-8 bg-color-8 placeholder-color-text no-focus-outline"
             />
             <input
               type="text"
               placeholder="@ enter email id"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="input w-full max-w-xs md:max-w-md rounded-full p-8 bg-color-8 placeholder-color-text no-focus-outline"
             />
             <input
-              type="text"
+              type="password"
               placeholder="# enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="input w-full max-w-xs md:max-w-md rounded-full p-8 bg-color-8 placeholder-color-text no-focus-outline"
             />
           </div>
@@ -64,15 +91,21 @@ const AlumniSignup = () => {
               <div className="col-span-2">
                 <button
                   className="btn mt-10 w-[100%] h-[3.5rem] rounded-full create-acc-btn font-8 text-md text-center"
-                  onClick={loginAccount}
+                  onClick={handleSignup}
+                  disabled={signupMutation.isLoading} // Disable button during loading
                 >
-                  LOGIN
+                  {signupMutation.isLoading ? "Signing Up..." : "SIGN UP"}
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {error && (
+        <div className="text-red-500 text-center mt-4">
+          {error}
+        </div>
+      )}
     </>
   );
 };
