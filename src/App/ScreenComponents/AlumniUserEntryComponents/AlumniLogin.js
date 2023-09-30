@@ -14,7 +14,7 @@ import "../../../AppStyles/Login-Signup.css";
 // ------------------------------------------------------
 import WebHeader from "../HeroComponents/WebHeader";
 
-import supabase from "../../Config/supabase"; // Import Supabase client
+import supabase from "../../config/supabase"; // Import Supabase client
 
 const AlumniLogin = () => {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "react-query"; // Import React Query
-import supabase from "../../Config/supabase"; // Import Supabase client
+import supabase from "../../config/supabase"; // Import Supabase client
 import WebHeader from "../HeroComponents/WebHeader";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

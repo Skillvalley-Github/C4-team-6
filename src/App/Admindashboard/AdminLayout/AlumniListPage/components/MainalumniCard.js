@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Alimnicard from './Alimnicard';
 import Pagination from '../../../../ScreenComponents/WebinerComponent/Components/Pagination';
 import { useQuery } from 'react-query';
-import { getAlumniByPage } from '../../../../Config/supaFunctions';
+import { getAlumniByPage } from '../../../../config/supaFunctions';
 import { alumnilistdata } from './data';
 
 const itemsPerPage = 5; // Number of items to display per page

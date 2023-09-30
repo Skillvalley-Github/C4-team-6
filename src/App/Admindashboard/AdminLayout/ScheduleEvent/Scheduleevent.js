@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Adminsidebar from '../../adminNave/Adminsidebar';
-import { submitStudent } from '../../../Config/supaFunctions';
+import { submitStudent } from '../../../config/supaFunctions';
 import { useMutation, useQueryClient } from 'react-query';
 function Scheduleevent() {
   // State variables for form inputs
