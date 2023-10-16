@@ -78,3 +78,21 @@
 .bg-color-8{
     background-color: var(--color-8);
 }
+/* ------------------------------ */
+/* COLOR-9 */
+/* ------------------------------ */
+.f-color-9{
+    color: var(--color-9);
+}
+.bg-color-9{
+    background-color: var(--color-9);
+}
+/* ------------------------------ */
+/* COLOR-10 */
+/* ------------------------------ */
+.f-color-10{
+    color: var(--color-10);
+}
+.bg-color-10{
+    background-color: var(--color-10);
+}

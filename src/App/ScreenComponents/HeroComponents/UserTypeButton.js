@@ -6,29 +6,27 @@ import { FaUser } from "react-icons/fa6";
 const UserTypeButton = () => {
   const navigate = useNavigate();
 
-  const redirectToAlumniSignIn = () => {
-    navigate("/alumni-login");
+  const redirectToSignIn = (userType) => {
+    navigate("/login", { state: { userType } });
   };
 
-  const redirectToStudentSignIn = () => {
-    navigate("/student-login");
-  };
+
   return (
     <>
-      <button className="flex" onClick={redirectToAlumniSignIn}>
-        <div className="absolute p-5 bg-color-3 rounded-full mt-1 md:mt-0 md:ml-[-10px]">
-          <FaGraduationCap className="text-5xl md:text-4xl" />
+      <button className="flex" onClick={() => redirectToSignIn("alumni")}>
+        <div className="absolute p-5 bg-color-3 rounded-full mt-[0.52rem] md:mt-0 md:ml-[-10px]">
+          <FaGraduationCap className="text-2xl md:text-4xl f-color-4" />
         </div>
-        <div className="px-28 py-4 md:py-3.5 mt-2 md:mt-0 border-dashed border-2 rounded-full btn-hov">
+        <div className="px-28 py-2 md:py-3.5 mt-2 md:mt-0 border-dashed border-2 rounded-full btn-hov">
           <p className="btn-font font-1 text-sm text-start">join as</p>
           <span className=" btn-font font-7 text-md">ALUMNI</span>
         </div>
       </button>
-      <button className="flex" onClick={redirectToStudentSignIn}>
-        <div className="absolute p-5 bg-color-3 rounded-full mt-1 md:mt-0 md:ml-[-10px]">
-          <FaUser className="text-5xl md:text-4xl" />
+      <button className="flex" onClick={() => redirectToSignIn("student")}>
+        <div className="absolute p-5 bg-color-3 rounded-full mt-[0.52rem] md:mt-0 md:ml-[-10px]">
+          <FaUser className="text-2xl md:text-4xl f-color-4" />
         </div>
-        <div className="px-28 py-4 md:py-3.5 mt-2 md:mt-0 border-dashed border-2 rounded-full btn-hov">
+        <div className="px-28 py-2 md:py-3.5 mt-2 md:mt-0 border-dashed border-2 rounded-full btn-hov">
           <p className="btn-font font-1 text-sm text-start">join as</p>
           <span className=" btn-font font-7 text-md">STUDENT</span>
         </div>

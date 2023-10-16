@@ -1,0 +1,86 @@
+import alumni from "./alumni.png"
+
+const jsonData = [
+    {
+      userId: 1,
+      userName: "John Doe",
+      paragraph: "In the vast expanse of the cosmos, our tiny blue planet Earth orbits the life-giving sun, a celestial dance that has persisted for billions of years. This remarkable cosmic ballet, played out on a stage of incomprehensible vastness, is home to an astounding diversity of life forms. As we stand on the precipice of the third decade of the 21st century, it's worth pondering the tapestry of existence that envelops our world.",
+      image: alumni,
+      createdAt: new Date().toISOString(),
+      alumni: true,
+    },
+    {
+      userId: 2,
+      userName: "Alice Smith",
+      paragraph: "In the vast expanse of the cosmos, our tiny blue planet Earth orbits the life-giving sun, a celestial dance that has persisted for billions of years. This remarkable cosmic ballet, played out on a stage of incomprehensible vastness, is home to an astounding diversity of life forms. As we stand on the precipice of the third decade of the 21st century, it's worth pondering the tapestry of existence that envelops our world.",
+      image: alumni,
+      createdAt: new Date().toISOString(),
+      alumni: true,
+    },
+    {
+      userId: 3,
+      userName: "Bob Johnson",
+      paragraph: "In the vast expanse of the cosmos, our tiny blue planet Earth orbits the life-giving sun, a celestial dance that has persisted for billions of years. This remarkable cosmic ballet, played out on a stage of incomprehensible vastness, is home to an astounding diversity of life forms. As we stand on the precipice of the third decade of the 21st century, it's worth pondering the tapestry of existence that envelops our world.",
+      image: alumni,
+      createdAt: new Date().toISOString(),
+      alumni: true,
+    },
+    {
+      userId: 4,
+      userName: "Emily Davis",
+      paragraph: "In the vast expanse of the cosmos, our tiny blue planet Earth orbits the life-giving sun, a celestial dance that has persisted for billions of years. This remarkable cosmic ballet, played out on a stage of incomprehensible vastness, is home to an astounding diversity of life forms. As we stand on the precipice of the third decade of the 21st century, it's worth pondering the tapestry of existence that envelops our world.",
+      image: alumni,
+      createdAt: new Date().toISOString(),
+      alumni: true,
+    },
+    {
+      userId: 5,
+      userName: "Michael Wilson",
+      paragraph: "In the vast expanse of the cosmos, our tiny blue planet Earth orbits the life-giving sun, a celestial dance that has persisted for billions of years. This remarkable cosmic ballet, played out on a stage of incomprehensible vastness, is home to an astounding diversity of life forms. As we stand on the precipice of the third decade of the 21st century, it's worth pondering the tapestry of existence that envelops our world.",
+      image: alumni,
+      createdAt: new Date().toISOString(),
+      alumni: true,
+    },
+    {
+      userId: 6,
+      userName: "Olivia Brown",
+      paragraph: "In the vast expanse of the cosmos, our tiny blue planet Earth orbits the life-giving sun, a celestial dance that has persisted for billions of years. This remarkable cosmic ballet, played out on a stage of incomprehensible vastness, is home to an astounding diversity of life forms. As we stand on the precipice of the third decade of the 21st century, it's worth pondering the tapestry of existence that envelops our world.",
+      image: alumni,
+      createdAt: new Date().toISOString(),
+      alumni: true,
+    },
+    {
+      userId: 7,
+      userName: "David Lee",
+      paragraph: "In the vast expanse of the cosmos, our tiny blue planet Earth orbits the life-giving sun, a celestial dance that has persisted for billions of years. This remarkable cosmic ballet, played out on a stage of incomprehensible vastness, is home to an astounding diversity of life forms. As we stand on the precipice of the third decade of the 21st century, it's worth pondering the tapestry of existence that envelops our world.",
+      image: alumni,
+      createdAt: new Date().toISOString(),
+      alumni: true,
+    },
+    {
+      userId: 8,
+      userName: "Sophia Martinez",
+      paragraph: "In the vast expanse of the cosmos, our tiny blue planet Earth orbits the life-giving sun, a celestial dance that has persisted for billions of years. This remarkable cosmic ballet, played out on a stage of incomprehensible vastness, is home to an astounding diversity of life forms. As we stand on the precipice of the third decade of the 21st century, it's worth pondering the tapestry of existence that envelops our world.",
+      image: alumni,
+      createdAt: new Date().toISOString(),
+      alumni: true,
+    },
+    {
+      userId: 9,
+      userName: "James Wilson",
+      paragraph: "In the vast expanse of the cosmos, our tiny blue planet Earth orbits the life-giving sun, a celestial dance that has persisted for billions of years. This remarkable cosmic ballet, played out on a stage of incomprehensible vastness, is home to an astounding diversity of life forms. As we stand on the precipice of the third decade of the 21st century, it's worth pondering the tapestry of existence that envelops our world.",
+      image: alumni,
+      createdAt: new Date().toISOString(),
+      alumni: true,
+    },
+    {
+      userId: 10,
+      userName: "Emma Johnson",
+      paragraph: "In the vast expanse of the cosmos, our tiny blue planet Earth orbits the life-giving sun, a celestial dance that has persisted for billions of years. This remarkable cosmic ballet, played out on a stage of incomprehensible vastness, is home to an astounding diversity of life forms. As we stand on the precipice of the third decade of the 21st century, it's worth pondering the tapestry of existence that envelops our world.",
+      image: alumni,
+      createdAt: new Date().toISOString(),
+      alumni: true,
+    },
+  ];
+  
+    export default jsonData;

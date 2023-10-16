@@ -5,26 +5,36 @@ import React, { Children } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./App/Routes/RootLayout";
 import { ChakraProvider } from "@chakra-ui/react";
+import { Navigate } from "react-router-dom";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+
 // ------------------------------------------------------
-// Screen components
+// user Screen components
 // ------------------------------------------------------
 import HeroPage from "./App/ScreenComponents/HeroPage";
-import AlumniLogin from "./App/ScreenComponents/AlumniUserEntryComponents/AlumniLogin";
-import AlumniSignup from "./App/ScreenComponents/AlumniUserEntryComponents/AlumniSignup";
-import StudentLogin from "./App/ScreenComponents/StudentUserEntry/StudentLogin";
-import StudentSignup from "./App/ScreenComponents/StudentUserEntry/StudentSignup";
+import Login from "./App/ScreenComponents/UserEntryComponents/Login";
+import Signup from "./App/ScreenComponents/UserEntryComponents/Signup";
 import Alumnus from "./App/ScreenComponents/AlumnusComponent/Alumnus";
 import ViewProfile from "./App/ScreenComponents/AlumnusComponent/ViewProfile";
 import Gallery from "./App/ScreenComponents/GalleryComponent/Gallery";
 import AllWebiner from "./App/ScreenComponents/WebinerComponent/AllWebiner";
-
-import AlumniList from "./App/Admindashboard/AdminLayout/AlumniListPage/AlumniList";
-import Dashboard from "./App/Admindashboard/AdminLayout/DashbordPage/Dashboard";
-import Studentlist from "./App/Admindashboard/AdminLayout/StudentListPage/Studentlist";
-import Scheduleevent from "./App/Admindashboard/AdminLayout/ScheduleEvent/Scheduleevent";
-import TestAdmin from "./App/Admindashboard/TestAdmin";
-
-
+import Career from "./App/ScreenComponents/CareerComponent/Career";
+import Profile from "./App/ScreenComponents/UserProfileComponent/Profile";
+import EditProfile from "./App/ScreenComponents/UserProfileComponent/EditProfile";
+import Discussion from "./App/ScreenComponents/DiscussionComponent/Discussion";
+// ------------------------------------------------------
+// Admin Screen components
+// ------------------------------------------------------
+// import AdminRouteGuard from "./AdminRouteGaurd";
+import AdminLogin from "./AppAdmin/AdminEntryScreen/AdminLogin";
+import Dashboard from "./AppAdmin/DashboardScreen/Dashboard";
+import Students from "./AppAdmin/StudentScreen/Students";
+import DetailsStudent from "./AppAdmin/StudentScreen/DetailsStudent";
+import Alumni from "./AppAdmin/AlumniListScreen/Alumni";
+import DetailsAlumni from "./AppAdmin/AlumniListScreen/DetailsAlumni";
+import AllPhotos from "./AppAdmin/GalleryScreen/AllPhotos";
+import AllRfmw from "./AppAdmin/RFMWs/AllRfmw";
+import AddPost from "./App/ScreenComponents/DiscussionComponent/AddPost";
 // ------------------------------------------------------
 // Web Routes
 // ------------------------------------------------------
@@ -37,20 +47,16 @@ const router = createBrowserRouter([
         element: <HeroPage />,
       },
       {
-        path: "/alumni-login",
-        element: <AlumniLogin />,
+        path: "/login",
+        element: <Login />,
       },
       {
-        path: "/alumni-signup",
-        element: <AlumniSignup />,
+        path: "/signup",
+        element: <Signup />,
       },
       {
-        path: "/student-login",
-        element: <StudentLogin />,
-      },
-      {
-        path: "/student-signup",
-        element: <StudentSignup />,
+        path: "/profile-edit",
+        element: <EditProfile />,
       },
     ],
   },
@@ -58,6 +64,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     children: [
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
       {
         path: "/alumnus",
         element: <Alumnus />,
@@ -74,33 +84,54 @@ const router = createBrowserRouter([
         path: "/all-webiner",
         element: <AllWebiner />,
       },
+      {
+        path: "/careers",
+        element: <Career />,
+      },
+      {
+        path: "/discussion",
+        element: <Discussion />,
+      },
+      {
+        path: "/discussion/add-post",
+        element: <AddPost />,
+      },
     ],
   },
   {
     path: "/",
     children: [
       {
+        path: "/admin-login",
+        element: <AdminLogin />,
+      },
+      {
         path: "/dashboard",
         element: <Dashboard />,
       },
       {
         path: "/studentlist",
-        element: <Studentlist />,
+        element: <Students />,
+      },
+      {
+        path: "/student-details",
+        element: <DetailsStudent />,
       },
       {
         path: "/alumnilist",
-        element: <AlumniList />,
+        element: <Alumni />,
       },
       {
-        path: "/Scheduleevent",
-        element: <Scheduleevent />,
+        path: "/alumni-details",
+        element: <DetailsAlumni />,
       },
       {
-        path: "/profile",
+        path: "/all-photos",
+        element: <AllPhotos />,
       },
       {
-        path: "/testing",
-        element: <TestAdmin />,
+        path: "/all-rfmw",
+        element: <AllRfmw />,
       },
     ],
   },
@@ -108,9 +139,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <ChakraProvider>
-      <RouterProvider router={router} />
-    </ChakraProvider>
+    <SkeletonTheme baseColor="#202020" highlightColor="#444">
+        <RouterProvider router={router} />
+    </SkeletonTheme>
   );
 }
 

@@ -1,18 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import GalleryCard from './GalleryCard'
-import {gallerydata} from './data'
-const Card = () => {
 
+const Card = ({ imageDataProps }) => {
   return (
    <>
    <div className='grid md:grid-cols-2 lg:grid-cols-3 py-16 mx-2 gap-14'>
     {
-        gallerydata.map((data)=>{
+        imageDataProps.map((data)=>{
         return(
           <GalleryCard
-          key={data.key}
-          title={data.title}
-          image={data.image}
+          key={data.id}
+          {...data}
           />
         )
       })

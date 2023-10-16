@@ -1,0 +1,61 @@
+import alumni from './alumni.png'
+
+const AlumniData = [
+  {
+    key: 1,
+    image: alumni,
+    name: "John Doe",
+    passoutYear: 2010,
+    designation: "Software Engineer",
+    shortDescription: "Experienced software engineer with expertise in web development.",
+    email: "john.doe@example.com",
+    linkedinLink: "https://www.linkedin.com/in/johndoe",
+    twitterLink: "https://twitter.com/johndoe",
+  },
+  {
+    key: 2,
+    image: alumni,
+    name: "Jane Smith",
+    passoutYear: 2015,
+    designation: "Product Manager",
+    shortDescription: "Product manager with a track record of successful product launches.",
+    email: "jane.smith@example.com",
+    linkedinLink: "https://www.linkedin.com/in/janesmith",
+    twitterLink: "https://twitter.com/janesmith",
+  },
+  {
+    key: 3,
+    image: alumni,
+    name: "Mike Johnson",
+    passoutYear: 2008,
+    designation: "Data Scientist",
+    shortDescription: "Data scientist with a passion for data analysis and machine learning.",
+    email: "mike.johnson@example.com",
+    linkedinLink: "https://www.linkedin.com/in/mikejohnson",
+    twitterLink: "https://twitter.com/mikejohnson",
+  },
+  {
+    key: 4,
+    image: alumni,
+    name: "Sarah Brown",
+    passoutYear: 2012,
+    designation: "Graphic Designer",
+    shortDescription: "Creative graphic designer with a keen eye for visual design.",
+    email: "sarah.brown@example.com",
+    linkedinLink: "https://www.linkedin.com/in/sarahbrown",
+    twitterLink: "https://twitter.com/sarahbrown",
+  },
+  {
+    key: 5,
+    image: alumni,
+    name: "David Wilson",
+    passoutYear: 2019,
+    designation: "Marketing Specialist",
+    shortDescription: "Marketing specialist with expertise in digital marketing strategies.",
+    email: "david.wilson@example.com",
+    linkedinLink: "https://www.linkedin.com/in/davidwilson",
+    twitterLink: "https://twitter.com/davidwilson",
+  },
+];
+
+export { AlumniData };
