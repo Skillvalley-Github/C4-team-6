@@ -22,10 +22,10 @@ import Career from "./App/ScreenComponents/CareerComponent/Career";
 import Profile from "./App/ScreenComponents/UserProfileComponent/Profile";
 import EditProfile from "./App/ScreenComponents/UserProfileComponent/EditProfile";
 import Discussion from "./App/ScreenComponents/DiscussionComponent/Discussion";
+import UpdateProfile from "./App/ScreenComponents/UserProfileComponent/UpdateProfile";
 // ------------------------------------------------------
 // Admin Screen components
 // ------------------------------------------------------
-// import AdminRouteGuard from "./AdminRouteGaurd";
 import AdminLogin from "./AppAdmin/AdminEntryScreen/AdminLogin";
 import Dashboard from "./AppAdmin/DashboardScreen/Dashboard";
 import Students from "./AppAdmin/StudentScreen/Students";
@@ -57,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/profile-edit",
         element: <EditProfile />,
+      },
+      {
+        path: "/profile-update",
+        element: <UpdateProfile />,
       },
     ],
   },

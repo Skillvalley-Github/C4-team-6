@@ -1,6 +1,5 @@
 import React from "react";
 import RFMWCard from "./RFMWCard";
-import RFMWData from "./RFMWData";
 
 const RFMWCluster = ({ RFMWDataProps }) => {
   return (

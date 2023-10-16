@@ -16,7 +16,6 @@ import NavigationBar from "../NavigationBar";
 import DahboardCards from "./Components/DahboardCards";
 import BrandSVG from "../Constants/reunifybrand.svg";
 import { useUserContext } from "../../App/Config/Context/UserProvider";
-import { redirect } from "react-router-dom";
 
 const Dashboard = () => {
 

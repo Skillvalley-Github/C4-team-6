@@ -29,12 +29,6 @@ const DiscussionCard = (props) => {
           </div>
         </div>
         <div className="font-2 f-color-2 my-6">
-          {/* {props.delta} */}
-          {/* <ReactQuill
-            toolbar={false}
-            value={props.delta}
-            readOnly={true}
-          /> */}
           <div
             dangerouslySetInnerHTML={{ __html: props.delta }} // Render the HTML content
           />

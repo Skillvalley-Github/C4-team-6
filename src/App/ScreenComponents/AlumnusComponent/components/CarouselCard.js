@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { AlumniData } from "./AlumniData";
 import SpotLightCard from "./SpotLightCard";
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -12,7 +11,6 @@ const CarouselCard = ( {AlumniDataProps}) => {
         return (
           <SpotLightCard
             key={data.id}
-            // supabaseKey={data.key}
             image={data.imageUrl}
             name={data.name}
             passoutYear={data.passoutYear}

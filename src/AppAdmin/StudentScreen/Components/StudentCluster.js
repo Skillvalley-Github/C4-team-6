@@ -1,5 +1,4 @@
 import React from 'react'
-// import { StudentData } from './StudentData';
 import StudentCard from './StudentCard';
 
 const StudentCluster = ({StudentDataProps}) => {

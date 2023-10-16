@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import CarouselCard from "./components/CarouselCard";
 import { CiSearch } from "react-icons/ci";
 import AllSeniors from "./components/AllSeniors";
-// import { AlumniData } from "./components/AlumniData";
 import { db } from "../../Config/Firebase/firebase-config";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import Skeleton from "react-loading-skeleton";

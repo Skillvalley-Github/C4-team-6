@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { PiCirclesFourFill } from "react-icons/pi";
 import "../../../../AppStyles/global.css";
 import "../../../../AppStyles/alumnus.css";

@@ -4,7 +4,6 @@ import { BsPlus } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import { SlCloudUpload } from "react-icons/sl";
 import GalleryCluster from "./components/GalleryCluster";
-import { GalleryData } from "./components/GalleryData";
 import { auth, db, storage } from "../../App/Config/Firebase/firebase-config";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import {

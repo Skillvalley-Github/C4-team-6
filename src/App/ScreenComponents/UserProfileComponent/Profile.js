@@ -66,7 +66,7 @@ const Profile = () => {
   }
 
   function editProfile() {
-    navigate("/profile-edit", { state: { userType: userType } });
+    navigate("/profile-update", { state: { userType: userType } });
   }
 
   const [imageData, setImageData] = useState([]);

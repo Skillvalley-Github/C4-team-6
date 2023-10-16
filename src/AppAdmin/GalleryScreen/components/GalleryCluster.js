@@ -1,5 +1,4 @@
 import React from "react";
-// import { GalleryData } from "./GalleryData";
 import GalleryCard from "./GalleryCard";
 
 

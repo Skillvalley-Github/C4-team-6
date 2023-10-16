@@ -2,12 +2,9 @@ import React, {useState} from "react";
 import "../../../../AppStyles/colors.css";
 import "../../../../AppStyles/global.css";
 import "../../../../AppStyles/alumnus.css";
-import alumni from "../../../Constants/alumni.png";
 import { PiCirclesFourFill } from "react-icons/pi";
 import { MdWorkspacesFilled } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
 
 const SpotLightCard = (props) => {
 

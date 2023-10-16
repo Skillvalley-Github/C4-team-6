@@ -50,7 +50,7 @@ const Login = () => {
       setUser(user.user);
       navigate("/profile")
     } catch (error) {
-      setError("Authentication failed. Please check your email and password.");
+      setError("Please check your email and password.");
       console.log(error);
     }
   }

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import NavigationBar from "../NavigationBar";
 import { CiSearch } from "react-icons/ci";
 import StudentCluster from "./Components/StudentCluster";
-import { StudentData } from "./Components/StudentData";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../App/Config/Firebase/firebase-config";
 import { useNavigate } from "react-router-dom";

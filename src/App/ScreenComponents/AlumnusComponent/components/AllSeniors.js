@@ -1,5 +1,4 @@
 import React from "react";
-// import { AlumniData } from "./AlumniData";
 import SeniorBadge from "./SeniorBadge";
 
 const AllSeniors = ({AlumniDataProps}) => {

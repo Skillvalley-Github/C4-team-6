@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { auth, db, storage } from "../../../Config/Firebase/firebase-config";
 import { useNavigate } from "react-router-dom";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import { collection, doc, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  setDoc,
+  updateDoc,
+  arrayUnion,
+  getDoc,
+} from "firebase/firestore";
 
-const AlumniEditProfile = () => {
+const AlumniUpdateProfile = () => {
   const user = auth.currentUser;
   const navigate = useNavigate();
 
@@ -19,62 +26,84 @@ const AlumniEditProfile = () => {
   const [linkedinUrl, setLinkedinUrl] = useState("");
   const [twitterUrl, setTwitterUrl] = useState("");
 
+  useEffect(() => {
+    // Fetch the user's current data from Firestore and set it in the state
+    const fetchUserData = async () => {
+      const userDocRef = doc(db, "users", user.uid);
+      const userDocSnapshot = await getDoc(userDocRef);
+      if (userDocSnapshot.exists()) {
+        const userData = userDocSnapshot.data();
+        setName(userData.name || "");
+        setImage(userData.imageUrl || "");
+        setDescription(userData.description || "");
+        setDepartment(userData.department || "");
+        setPhone(userData.phone || "");
+        setPassoutYear(userData.passoutYear || "");
+        setEmployeeAt(userData.employeeAt || "");
+        setDesignation(userData.designation || "");
+        setLinkedinUrl(userData.linkedinUrl || "");
+        setTwitterUrl(userData.twitterUrl || "");
+      }
+    };
+    fetchUserData();
+  }, [user]);
+
   const handleImageChange = (e) => {
     const imageFile = e.target.files[0];
     setImage(imageFile);
   };
 
-  const handleAlumniData = async (e) => {
+  const handleUpdateProfile = async (e) => {
     e.preventDefault();
 
     try {
       const imageRef = ref(storage, `users/alumni/${user.uid}/${Date.now()}`);
-
       await uploadBytes(imageRef, image);
-
       const imageUrl = await getDownloadURL(imageRef);
 
-      const usersCollection = collection(db, "users");
+      const userDocRef = doc(db, "users", user.uid);
 
-      const userDoc = doc(usersCollection, user.uid);
-
-      await setDoc(userDoc, {
-        id: user.uid,
+      // Update the user's data in the Firestore collection
+      await updateDoc(userDocRef, {
         name,
-        email: user.email,
-        phone,
         description,
         department,
+        phone,
         passoutYear,
         employeeAt,
         designation,
         linkedinUrl,
         twitterUrl,
         imageUrl,
-        userType: "alumni",
       });
 
-      console.log("Alumni data added successfully");
+      console.log("Profile updated successfully");
       navigate("/profile");
     } catch (error) {
       console.log(error);
     }
   };
-
   return (
     <>
       <div className="grid grid-cols-4 px-2 pt-5">
         <div className="col-span-4 flex flex-col justify-center align-middle pt-5">
-          <p className="font-1 f-color-2 text-center w-[100%]">Add data to</p>
+          <p className="font-1 f-color-2 text-center w-[100%]">update</p>
           <p className="font-7 f-color-2 text-5xl text-center w-[100%] uppercase">
             PROFILE
           </p>
         </div>
         <div className="col-span-4 lg:col-span-1"></div>
         <div className="col-span-4 lg:col-span-2 flex flex-col justify-center align-middle pt-5">
-          <div
-            className="form-middle gap-5 mt-6 px-4 w-[100%]"
-          >
+          <div className="form-middle gap-5 mt-6 px-4 w-[100%]">
+            {image && (
+              <figure className="h-[150px] w-[150px] bg-cover object-cover">
+                <img
+                  src={image}
+                  alt="Profile"
+                  className="rounded-full h-[100%] w-[100%] bg-cover object-cover"
+                />
+              </figure>
+            )}
             <input
               type="file"
               className="file-input rounded-full file-input-ghost w-full md:max-w-md file-input-lg"
@@ -88,7 +117,8 @@ const AlumniEditProfile = () => {
               className="input w-full md:max-w-md rounded-full p-8 bg-color-8 placeholder-color-text no-focus-outline"
             />
             <input
-              type="@ Enter your email"
+              type="email"
+              placeholder="@ Enter your email"
               value={user.email}
               className="input w-full md:max-w-md rounded-full p-8 bg-color-8 placeholder-color-text no-focus-outline"
               disabled
@@ -124,7 +154,7 @@ const AlumniEditProfile = () => {
             />
             <input
               type="text"
-              placeholder="? You are employee at?"
+              placeholder="? You are an employee at?"
               value={employeeAt}
               onChange={(e) => setEmployeeAt(e.target.value)}
               className="input w-full md:max-w-md rounded-full p-8 bg-color-8 placeholder-color-text no-focus-outline"
@@ -138,14 +168,14 @@ const AlumniEditProfile = () => {
             />
             <input
               type="text"
-              placeholder="* your linkedin url"
+              placeholder="* your LinkedIn URL"
               value={linkedinUrl}
               onChange={(e) => setLinkedinUrl(e.target.value)}
               className="input w-full md:max-w-md rounded-full p-8 bg-color-8 placeholder-color-text no-focus-outline"
             />
             <input
               type="text"
-              placeholder="* your twitter url"
+              placeholder="* your Twitter URL"
               value={twitterUrl}
               onChange={(e) => setTwitterUrl(e.target.value)}
               className="input w-full md:max-w-md rounded-full p-8 bg-color-8 placeholder-color-text no-focus-outline"
@@ -153,9 +183,9 @@ const AlumniEditProfile = () => {
             <button
               type="submit"
               className="btn mt-5 mb-10 w-[100%] md:w-[60%] h-[4rem] rounded-full create-acc-btn font-8 text-md text-center"
-              onClick={handleAlumniData}
+              onClick={handleUpdateProfile}
             >
-              ADD DATA
+              UPDATE
             </button>
           </div>
         </div>
@@ -165,4 +195,4 @@ const AlumniEditProfile = () => {
   );
 };
 
-export default AlumniEditProfile;
+export default AlumniUpdateProfile;

@@ -1,13 +1,13 @@
 import { getAuth } from "firebase/auth";
 import React from "react";
 import { useLocation } from "react-router-dom";
-import AlumniEditProfile from "./components/AlumniEditProfile";
-import StudentEditProfile from "./components/StudentEditProfile";
+import AlumniUpdateProfile from "./components/AlumniUpdateProfile";
+import StudentUpdateProfile from "./components/StudentUpdateProfile";
 import { useUserContext } from "../../Config/Context/UserProvider";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-const EditProfile = () => {
+const UpdateProfile = () => {
 
     const location = useLocation();
 
@@ -22,12 +22,12 @@ const EditProfile = () => {
   return (
     <>
       <div className="pt-10">
-        {user ? (
+      {user ? (
           // {
           userType === "alumni" ? (
-            <AlumniEditProfile />
+            <AlumniUpdateProfile />
           ) : (
-            <StudentEditProfile />
+            <StudentUpdateProfile />
           )
         ) : (
           <Skeleton
@@ -38,7 +38,7 @@ const EditProfile = () => {
         )}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default EditProfile;
+export default UpdateProfile

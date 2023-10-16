@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { TfiWrite } from "react-icons/tfi";
 import DiscussionCluster from "./components/DiscussionCluster";
-import jsonData from "./components/DiscussionData";
 import { useNavigate } from "react-router-dom";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../Config/Firebase/firebase-config";
@@ -31,8 +30,8 @@ const Discussion = () => {
 
   const floatingButtonStyle = {
     position: "fixed",
-    bottom: "20px", // Adjust the distance from the bottom as needed
-    right: "20px", // Adjust the distance from the right as needed
+    bottom: "20px", 
+    right: "20px", 
     zIndex: 1000,
   };
 

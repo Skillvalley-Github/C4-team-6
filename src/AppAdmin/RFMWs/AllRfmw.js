@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavigationBar from "../NavigationBar";
 import RFMWCluster from "./components/RFMWCluster";
-// import RFMWData from "./components/RFMWData";
 import { collection, deleteDoc, doc, getDocs, orderBy, query, updateDoc, where } from "firebase/firestore";
 import { db } from "../../App/Config/Firebase/firebase-config";
 import { useNavigate } from "react-router-dom";

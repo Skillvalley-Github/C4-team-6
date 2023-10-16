@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FilterEvents from "./Components/FilterEvents";
 import EventList from "./Components/EventList";
-// import { EventData } from "./Components/EventData";
 import "../../../AppStyles/webinars.css";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../Config/Firebase/firebase-config";
