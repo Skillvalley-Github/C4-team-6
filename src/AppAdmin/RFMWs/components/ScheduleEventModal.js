@@ -14,7 +14,7 @@ import {
 import { v4 as uuidv4 } from "uuid";
 import { db, storage } from "../../../App/Config/Firebase/firebase-config";
 import { RiDeleteBin6Fill } from "react-icons/ri";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 const ScheduleEventModal = ({ allData }) => {
   const [uploadedMessage, setUploadedMessage] = useState("");
@@ -30,6 +30,7 @@ const ScheduleEventModal = ({ allData }) => {
   const [isLoading, setIsLoading] = useState(
     localStorage.getItem("isLoading") === "true" ? true : false
   );
+  const [error, setError] = useState("");
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
@@ -48,8 +49,27 @@ const ScheduleEventModal = ({ allData }) => {
     modalElement.close();
   };
 
+  const resetError = () => {
+    setError("");
+  };
+
   const handleUpload = async (e) => {
     e.preventDefault();
+
+    if (
+      !title ||
+      !date ||
+      !time ||
+      !webinarLink ||
+      !speakerName ||
+      !description
+    ) {
+      setError("Please fill in all the required fields.");
+      return;
+    } else {
+      setError("");
+    }
+
     setIsLoading(true);
     try {
       const path = `Webinar/Thumbnail/${Date.now()}`;
@@ -104,9 +124,9 @@ const ScheduleEventModal = ({ allData }) => {
 
       // Show a SweetAlert confirmation dialog
       const { isConfirmed } = await Swal.fire({
-        title: 'Confirm Delete',
-        text: 'Are you sure you want to delete this photo?',
-        icon: 'warning',
+        title: "Confirm Delete",
+        text: "Are you sure you want to delete this photo?",
+        icon: "warning",
         showCancelButton: true,
       });
 
@@ -122,10 +142,9 @@ const ScheduleEventModal = ({ allData }) => {
       });
 
       // Show a success SweetAlert dialog
-      Swal.fire('Photo deleted successfully', '', 'success').then(() => {
+      Swal.fire("Photo deleted successfully", "", "success").then(() => {
         window.location.reload();
       });
-
     } catch (error) {
       console.error("Error updating document:", error);
     }
@@ -139,12 +158,15 @@ const ScheduleEventModal = ({ allData }) => {
             className="btn bg-color-3 border-none w-[85%] font-6 rounded-lg"
             onClick={() => {
               document.getElementById("my_modal_5").showModal();
-              console.log(speakerName);
+              resetError(); 
             }}
           >
             Schedule event
           </button>
-          <button className="btn bg-color-8 border-none w-[15%] font-6 rounded-lg" onClick={handleDelete}>
+          <button
+            className="btn bg-color-8 border-none w-[15%] font-6 rounded-lg"
+            onClick={handleDelete}
+          >
             <RiDeleteBin6Fill size={20} className="f-color-3" />
           </button>
         </div>
@@ -239,6 +261,7 @@ const ScheduleEventModal = ({ allData }) => {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
+              {error && <div className="text-red-600 text-center my-2">{error}</div>}
               <button
                 for="uploadfile"
                 className="bg-color-4 w-full f-color-1 p-3 rounded-xl font-6 "

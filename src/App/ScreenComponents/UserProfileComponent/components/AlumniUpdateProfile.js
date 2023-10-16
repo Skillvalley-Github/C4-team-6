@@ -27,7 +27,6 @@ const AlumniUpdateProfile = () => {
   const [twitterUrl, setTwitterUrl] = useState("");
 
   useEffect(() => {
-    // Fetch the user's current data from Firestore and set it in the state
     const fetchUserData = async () => {
       const userDocRef = doc(db, "users", user.uid);
       const userDocSnapshot = await getDoc(userDocRef);
@@ -61,6 +60,8 @@ const AlumniUpdateProfile = () => {
       await uploadBytes(imageRef, image);
       const imageUrl = await getDownloadURL(imageRef);
 
+      
+
       const userDocRef = doc(db, "users", user.uid);
 
       // Update the user's data in the Firestore collection
@@ -83,6 +84,7 @@ const AlumniUpdateProfile = () => {
       console.log(error);
     }
   };
+  
   return (
     <>
       <div className="grid grid-cols-4 px-2 pt-5">

@@ -27,6 +27,7 @@ const AllPhotos = () => {
   const [isLoading, setIsLoading] = useState(
     localStorage.getItem("isLoading") === "true" ? true : false
   );
+  const [isMessageEmpty, setIsMessageEmpty] = useState(false);
   const [userData, setUserData] = useState({});
 
   const { user } = useUserContext();
@@ -61,6 +62,10 @@ const AllPhotos = () => {
 
   const handleUpload = async (e) => {
     e.preventDefault();
+    if (!title || !image) {
+      alert("Please fill in the required fields.");
+      return;
+    }
     setIsLoading(true);
     try {
       const path = `gallery/${user.uid}/${Date.now()}`;
@@ -155,6 +160,11 @@ const AllPhotos = () => {
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                 />
+                {isMessageEmpty && (
+                  <p className="text-red-500 text-center mb-5">
+                    Message cannot be empty
+                  </p>
+                )}
                 <button
                   for="uploadfile"
                   className="bg-color-4 w-full f-color-1 p-3 rounded-xl font-6 "
