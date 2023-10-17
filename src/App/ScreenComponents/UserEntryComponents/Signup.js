@@ -35,7 +35,6 @@ const Signup = () => {
     try {
       const data = await createUserWithEmailAndPassword(auth, email, password);
       setUser(data.user);
-      console.log(data);
       navigate('/profile-edit', {state: {userType}})
     } catch (error) {
       

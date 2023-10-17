@@ -54,8 +54,6 @@ const StudentUpdateProfile = () => {
         currentYear,
         imageUrl, // Update the image URL
       });
-
-      console.log("Profile updated successfully");
       navigate("/profile");
     } catch (error) {
       console.log(error);

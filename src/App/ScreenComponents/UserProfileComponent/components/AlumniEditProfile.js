@@ -53,8 +53,6 @@ const AlumniEditProfile = () => {
         imageUrl,
         userType: "alumni",
       });
-
-      console.log("Alumni data added successfully");
       navigate("/profile");
     } catch (error) {
       console.log(error);

@@ -146,7 +146,7 @@ const ViewProfile = () => {
               <p className="font-1 f-color-5 text-sm lg:text-md">
                 Alumni of {alumniData.department} department
               </p>
-              <p className="font-4 f-color-3 mt-4">{alumniData?.designation}</p>
+              <p className="font-4 f-color-3 mt-4">{alumniData?.designation} @{alumniData.employeeAt}</p>
               <span className="f-color-6">{alumniData.description}</span>
             </div>
             <div className="flex justify-between align-baseline w-[100%] flex-col md:flex-row">

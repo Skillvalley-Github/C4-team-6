@@ -107,7 +107,6 @@ const Career = () => {
             <div className="w-[100%] flex justify-center md:justify-end align-middle gap-6 md:gap-10">
               <Skeleton height={60} width={60} circle={true} />
               <Skeleton height={60} width={60} circle={true} />
-              {/* <Skeleton height={60} width={60} circle={true} /> */}
             </div>
           ) : (
             <div className="btns font-6 flex flex-wrap gap-6 md:gap-10 justify-center align-middle">
@@ -139,7 +138,7 @@ const Career = () => {
         <div className="col-span-3 pt-10">
           {jobData ? (
             filteredJobCards.length > 0 ? (
-              filteredJobCards // Render filtered job cards
+              filteredJobCards 
             ) : (
               <p className="text-center font-2 f-color-2">
                 No jobs match your search.
@@ -151,7 +150,8 @@ const Career = () => {
               style={{ width: "100%" }}
               count={4}
             />
-          )}
+          )
+          }
         </div>
       </div>
     </>

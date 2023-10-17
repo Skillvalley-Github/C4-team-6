@@ -77,8 +77,6 @@ const AlumniUpdateProfile = () => {
         twitterUrl,
         imageUrl,
       });
-
-      console.log("Profile updated successfully");
       navigate("/profile");
     } catch (error) {
       console.log(error);

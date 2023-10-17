@@ -130,7 +130,7 @@ const Profile = () => {
                         Passout @{userData.passoutYear}
                       </p>
                       <p className="font-4 f-color-3 mt-4">
-                        {userData.designation}
+                        {userData.designation} @{userData.employeeAt}
                       </p>
                       <span className="f-color-6">{userData.description}</span>
                     </div>

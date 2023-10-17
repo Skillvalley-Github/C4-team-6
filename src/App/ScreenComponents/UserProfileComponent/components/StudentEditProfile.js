@@ -40,8 +40,6 @@ const StudentEditProfile = () => {
         imageUrl,
         userType: "student",
       });
-
-      console.log("Student data added successfully");
       navigate("/profile");
     } catch (error) {
       console.log(error);
@@ -94,7 +92,7 @@ const StudentEditProfile = () => {
             />
             <input
               type="text"
-              placeholder="? What's your current year?"
+              placeholder="? What's your current year? (eg: 1st/2nd/3rd/4th)"
               value={currentYear}
               onChange={(e) => setCurrentYear(e.target.value)}
               className="input w-full md:max-w-md rounded-full p-8 bg-color-8 placeholder-color-text no-focus-outline"
