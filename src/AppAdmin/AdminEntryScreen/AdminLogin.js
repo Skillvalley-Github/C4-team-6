@@ -16,6 +16,8 @@ const AdminLogin = () => {
   const {setUser} = useUserContext();
   const auth = getAuth();
 
+  const [authUser, setAuthUser] = useState(null);
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -28,6 +30,23 @@ const AdminLogin = () => {
       const user = await signInWithEmailAndPassword(auth, email, password);
       setUser(user.user);
       console.log(user.user.email)
+
+      //--------------------------------
+      //      admin Signup
+      //--------------------------------
+
+      // const authResult = await createUserWithEmailAndPassword(auth, email, password);
+      // const user = authResult.user;
+      // setAuthUser(user);
+
+      // const userRef = doc(db, "users", authUser.uid);
+      // await setDoc(userRef, {
+      //   name: 'Reunify Admin',
+      //   email: authUser.email,
+      //   userType: 'admin',
+      //   id: authUser.uid
+      // })
+
       navigate("/dashboard")
       console.log(user.user)
     } catch (error) {
